@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+<!--
+  Jimny 4x4 Rentals building blocks.
+
+  Every section root carries o_cc + o_ccN so its background/text pair
+  comes from the website's configured Color Presets (Website >
+  Configuration > Theme) rather than a hardcoded color, and can be
+  changed per-instance from the block's "Colors" option in the editor.
+  The o_ccN picked below is only a sensible default rhythm (dark/light
+  alternating, matching the approved design) — for it to reproduce the
+  exact approved palette, set Color Presets 1-5 to:
+    1 dark ink #14170F / 2 forest #1F4A0B / 3 cream #F5E7CC /
+    4 parchment #EDE6D3 / 5 sand accent #FF954D
+  Layout uses Bootstrap 5's grid (container/row/col-lg-*) and buttons
+  are plain .btn so they pick up the section's color combo automatically.
+-->
+
 <template id="s_jimny_hero" name="Jimny - Hero">
-  <section class="s_jimny_hero" data-snippet="s_jimny_hero" data-name="Jimny Hero">
-    <video class="hero-video" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="auto">
+  <section class="s_jimny_hero o_cc o_cc1 position-relative overflow-hidden d-flex align-items-center min-vh-100" data-snippet="s_jimny_hero" data-name="Jimny Hero">
+    <video class="hero-video position-absolute top-0 start-0 w-100 h-100" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="auto">
       <source src="/theme_custom/static/src/img/hero-video.mp4" type="video/mp4"/>
     </video>
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <div class="kicker">Permit No. J4X4 — Cape Town, ZA</div>
-        <h1>Explore.<br/>Unwind.<br/><em>Discover.</em></h1>
-        <p class="lead">Rent a nimble Suzuki Jimny 4X4 and embark on the journey you've been craving! Rugged trails, hidden spots and pure freedom.</p>
-        <div class="price-line">Starting from as little as <b>R1,300</b> / day</div>
-        <div class="hero-ctas">
-          <a class="jn-btn jn-btn-primary" href="/book">Book Your Adventure</a>
-          <a class="jn-btn jn-btn-ghost" href="/shop">Shop Gear</a>
-        </div>
-        <div class="hero-trust">
-          <div>24/7 GPS Tracking</div>
-          <div>Fully Equipped 4X4s</div>
-          <div>Local Cape Town Team</div>
-          <div>Roadside Assistance</div>
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-7 hero-copy">
+          <div class="kicker">Permit No. J4X4 — Cape Town, ZA</div>
+          <h1>Explore.<br/>Unwind.<br/><em>Discover.</em></h1>
+          <p class="lead">Rent a nimble Suzuki Jimny 4X4 and embark on the journey you've been craving! Rugged trails, hidden spots and pure freedom.</p>
+          <div class="price-line">Starting from as little as <b>R1,300</b> / day</div>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a class="btn btn-primary" href="/book">Book Your Adventure</a>
+            <a class="btn btn-outline-primary" href="/shop">Shop Gear</a>
+          </div>
+          <div class="hero-trust d-flex flex-wrap border-top pt-3">
+            <div>24/7 GPS Tracking</div>
+            <div>Fully Equipped 4X4s</div>
+            <div>Local Cape Town Team</div>
+            <div>Roadside Assistance</div>
+          </div>
         </div>
       </div>
     </div>
@@ -28,20 +46,24 @@
 </template>
 
 <template id="s_jimny_feature" name="Jimny - Feature">
-  <section class="s_jimny_feature" data-snippet="s_jimny_feature" data-name="Jimny Feature">
-    <div class="wrap feature-grid">
-      <div class="feature-photo">
-        <img loading="lazy" src="/theme_custom/static/src/img/feature-photo.jpg" alt="Jimny 4x4 Rental parked beside a river at sunset with a campfire, Western Cape"/>
-      </div>
-      <div>
-        <h2>We packed everything. Except your baggage.</h2>
-        <p>An upgraded suspension, rooftop tents, wine glasses... and even a winch to pull you out of your comfort zone! Fully equipped 4X4s ready for your next unforgettable story.</p>
-        <a class="jn-btn jn-btn-primary" href="/book">Check Availability</a>
-        <div class="feature-list">
-          <span>Rooftop Tents</span>
-          <span>Camping Gear</span>
-          <span>Winch</span>
-          <span>No Queues, No Counters</span>
+  <section class="s_jimny_feature o_cc o_cc3 py-5" data-snippet="s_jimny_feature" data-name="Jimny Feature">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="feature-photo ratio ratio-4x3">
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/feature-photo.jpg" alt="Jimny 4x4 Rental parked beside a river at sunset with a campfire, Western Cape"/>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <h2>We packed everything. Except your baggage.</h2>
+          <p>An upgraded suspension, rooftop tents, wine glasses... and even a winch to pull you out of your comfort zone! Fully equipped 4X4s ready for your next unforgettable story.</p>
+          <a class="btn btn-primary mb-4" href="/book">Check Availability</a>
+          <div class="feature-list d-flex flex-wrap">
+            <span>Rooftop Tents</span>
+            <span>Camping Gear</span>
+            <span>Winch</span>
+            <span>No Queues, No Counters</span>
+          </div>
         </div>
       </div>
     </div>
@@ -49,57 +71,57 @@
 </template>
 
 <template id="s_jimny_steps" name="Jimny - Steps">
-  <section class="s_jimny_steps" data-snippet="s_jimny_steps" data-name="Jimny Steps">
-    <div class="wrap">
+  <section class="s_jimny_steps o_cc o_cc2 py-5" data-snippet="s_jimny_steps" data-name="Jimny Steps">
+    <div class="container">
       <h2>Secure your Jimny in four steps</h2>
-      <p>From first message to open road in four steps.</p>
-      <div class="steps-row">
-        <div class="step"><div class="step-num">01</div><div class="step-tag">Meet</div><p>Tell us where to meet you.</p></div>
-        <div class="step"><div class="step-num">02</div><div class="step-tag">Deposit</div><p>Pay your deposit online.</p></div>
-        <div class="step"><div class="step-num">03</div><div class="step-tag">Keys</div><p>Grab your keys, no queues.</p></div>
-        <div class="step"><div class="step-num">04</div><div class="step-tag">Go</div><p>Start your adventure.</p></div>
+      <p class="mb-5">From first message to open road in four steps.</p>
+      <div class="row steps-row">
+        <div class="col-6 col-lg-3 step"><div class="step-num">01</div><div class="step-tag">Meet</div><p>Tell us where to meet you.</p></div>
+        <div class="col-6 col-lg-3 step"><div class="step-num">02</div><div class="step-tag">Deposit</div><p>Pay your deposit online.</p></div>
+        <div class="col-6 col-lg-3 step"><div class="step-num">03</div><div class="step-tag">Keys</div><p>Grab your keys, no queues.</p></div>
+        <div class="col-6 col-lg-3 step"><div class="step-num">04</div><div class="step-tag">Go</div><p>Start your adventure.</p></div>
       </div>
     </div>
   </section>
 </template>
 
 <template id="s_jimny_fleet_teaser" name="Jimny - Fleet Teaser">
-  <section class="s_jimny_fleet_teaser" data-snippet="s_jimny_fleet_teaser" data-name="Jimny Fleet Teaser">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Our Fleet</h2>
-        <p>Hand-picked Suzuki Jimnys. GPS tracked. Maintained to expedition standards.</p>
+  <section class="s_jimny_fleet_teaser o_cc o_cc3 py-5" data-snippet="s_jimny_fleet_teaser" data-name="Jimny Fleet Teaser">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 section-head">
+        <h2 class="mb-0">Our Fleet</h2>
+        <p class="mb-0">Hand-picked Suzuki Jimnys. GPS tracked. Maintained to expedition standards.</p>
       </div>
-      <div class="fleet-grid">
-        <div class="ticket">
-          <img class="ticket-photo" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-yoda.jpg" alt="Jimny 3-Door MT, Special Vehicle Yoda, lime green, side profile"/>
+      <div class="row g-0 fleet-grid">
+        <div class="col-md-6 col-lg-4 ticket">
+          <img class="ticket-photo w-100" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-yoda.jpg" alt="Jimny 3-Door MT, Special Vehicle Yoda, lime green, side profile"/>
           <div class="ticket-top"><div class="role">Special Vehicle — "Yoda"</div><h3>Jimny 3-Door MT</h3><div class="plate">CAM-24891</div></div>
           <div class="ticket-body">
             <div class="spec"><span class="k">Seats</span><span class="v">2</span></div>
             <div class="spec"><span class="k">Colour</span><span class="v">Lime</span></div>
             <div class="spec"><span class="k">Transmission</span><span class="v">Manual</span></div>
           </div>
-          <div class="ticket-foot"><div class="rate">R1,900<small>/day</small></div><a class="jn-btn jn-btn-primary" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,900<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
-        <div class="ticket">
-          <img class="ticket-photo" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-explorer.jpg" alt="Jimny 5-Door AT, Explorer package, white exterior"/>
+        <div class="col-md-6 col-lg-4 ticket">
+          <img class="ticket-photo w-100" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-explorer.jpg" alt="Jimny 5-Door AT, Explorer package, white exterior"/>
           <div class="ticket-top"><div class="role">Explorer — 4 Seater</div><h3>Jimny 5-Door AT</h3><div class="plate">CF-374254</div></div>
           <div class="ticket-body">
             <div class="spec"><span class="k">Seats</span><span class="v">4</span></div>
             <div class="spec"><span class="k">Colour</span><span class="v">White</span></div>
             <div class="spec"><span class="k">Transmission</span><span class="v">Automatic</span></div>
           </div>
-          <div class="ticket-foot"><div class="rate">R1,300<small>/day</small></div><a class="jn-btn jn-btn-primary" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,300<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
-        <div class="ticket">
-          <img class="ticket-photo" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-overlander.jpg" alt="Jimny 5-Door AT, Overlander package, beige exterior with roof cargo"/>
+        <div class="col-md-6 col-lg-4 ticket">
+          <img class="ticket-photo w-100" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-overlander.jpg" alt="Jimny 5-Door AT, Overlander package, beige exterior with roof cargo"/>
           <div class="ticket-top"><div class="role">Overlander — 2 Seater</div><h3>Jimny 5-Door AT</h3><div class="plate">CY-11393</div></div>
           <div class="ticket-body">
             <div class="spec"><span class="k">Seats</span><span class="v">2</span></div>
             <div class="spec"><span class="k">Colour</span><span class="v">Ivory</span></div>
             <div class="spec"><span class="k">Transmission</span><span class="v">Automatic</span></div>
           </div>
-          <div class="ticket-foot"><div class="rate">R2,450<small>/day</small></div><a class="jn-btn jn-btn-primary" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R2,450<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
       </div>
       <div class="fleet-note">Real Odoo fleet records (plates, colours, pricing).</div>
@@ -108,19 +130,19 @@
 </template>
 
 <template id="s_jimny_fleet_gallery" name="Jimny - Fleet Gallery">
-  <section class="s_jimny_fleet_gallery" data-snippet="s_jimny_fleet_gallery" data-name="Jimny Fleet Gallery">
-    <div class="wrap">
-      <div class="filter-row">
+  <section class="s_jimny_fleet_gallery o_cc o_cc3 py-5" data-snippet="s_jimny_fleet_gallery" data-name="Jimny Fleet Gallery">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-2 mb-4 filter-row">
         <button class="filter-pill active" data-filter="all">All</button>
         <button class="filter-pill" data-filter="explorer">Explorer — 4 Seater</button>
         <button class="filter-pill" data-filter="overlander">Overlander — 2 Seater</button>
         <button class="filter-pill" data-filter="special">Special Vehicle</button>
       </div>
-      <div class="fleet-grid">
+      <div class="row g-0 fleet-grid">
 
-        <div class="ticket" data-category="special">
-          <div class="s_jimny_gallery">
-            <div class="gallery-track" tabindex="0" role="region" aria-label="Yoda vehicle photos, scrollable">
+        <div class="col-md-6 col-lg-4 ticket" data-category="special">
+          <div class="s_jimny_gallery position-relative overflow-hidden">
+            <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Yoda vehicle photos, scrollable">
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-1.jpg" alt="CAM-24891 — front view"/>
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-2.jpg" alt="CAM-24891 — rear three-quarter view"/>
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-3.jpg" alt="CAM-24891 — side profile"/>
@@ -130,7 +152,7 @@
             </div>
             <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
             <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
-            <div class="gallery-dots"/>
+            <div class="gallery-dots position-absolute d-flex justify-content-center"/>
           </div>
           <div class="ticket-top"><div class="role">Special Vehicle — "Yoda"</div><h3>Jimny 3-Door MT</h3><div class="plate">CAM-24891</div></div>
           <div class="ticket-body">
@@ -140,12 +162,12 @@
             <div class="spec"><span class="k">Odometer</span><span class="v">0 km</span></div>
             <div class="spec"><span class="k">Tracking</span><span class="v">GPS ✓</span></div>
           </div>
-          <div class="ticket-foot"><div class="rate">R1,900<small>/day</small></div><a class="jn-btn jn-btn-primary" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,900<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
 
-        <div class="ticket" data-category="explorer">
-          <div class="s_jimny_gallery">
-            <div class="gallery-track" tabindex="0" role="region" aria-label="Jimny Explorer, white exterior photos, scrollable">
+        <div class="col-md-6 col-lg-4 ticket" data-category="explorer">
+          <div class="s_jimny_gallery position-relative overflow-hidden">
+            <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Jimny Explorer, white exterior photos, scrollable">
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-1.jpg" alt="Jimny Explorer, white exterior, front view"/>
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-2.jpg" alt="Jimny Explorer, white exterior, front three-quarter view"/>
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-3.jpg" alt="Jimny Explorer, white exterior, left side view"/>
@@ -155,7 +177,7 @@
             </div>
             <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
             <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
-            <div class="gallery-dots"/>
+            <div class="gallery-dots position-absolute d-flex justify-content-center"/>
           </div>
           <div class="ticket-top"><div class="role">Explorer — 4 Seater</div><h3>Jimny 5-Door AT</h3><div class="plate">CF-374254</div></div>
           <div class="ticket-body">
@@ -165,12 +187,12 @@
             <div class="spec"><span class="k">Odometer</span><span class="v">0 km</span></div>
             <div class="spec"><span class="k">Tracking</span><span class="v">GPS ✓</span></div>
           </div>
-          <div class="ticket-foot"><div class="rate">R1,300<small>/day</small></div><a class="jn-btn jn-btn-primary" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,300<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
 
-        <div class="ticket" data-category="overlander">
-          <div class="s_jimny_gallery">
-            <div class="gallery-track" tabindex="0" role="region" aria-label="Jimny Overlander, beige exterior with roof cargo photos, scrollable">
+        <div class="col-md-6 col-lg-4 ticket" data-category="overlander">
+          <div class="s_jimny_gallery position-relative overflow-hidden">
+            <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Jimny Overlander, beige exterior with roof cargo photos, scrollable">
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-1.jpg" alt="Jimny Overlander, beige exterior with roof cargo, front view"/>
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-2.jpg" alt="Jimny Overlander, beige exterior with roof cargo, front three-quarter view"/>
               <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-3.jpg" alt="Jimny Overlander, beige exterior with roof cargo, left side view"/>
@@ -180,7 +202,7 @@
             </div>
             <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
             <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
-            <div class="gallery-dots"/>
+            <div class="gallery-dots position-absolute d-flex justify-content-center"/>
           </div>
           <div class="ticket-top"><div class="role">Overlander — 2 Seater</div><h3>Jimny 5-Door AT</h3><div class="plate">CY-11393</div></div>
           <div class="ticket-body">
@@ -190,7 +212,7 @@
             <div class="spec"><span class="k">Odometer</span><span class="v">0 km</span></div>
             <div class="spec"><span class="k">Tracking</span><span class="v">GPS ✓</span></div>
           </div>
-          <div class="ticket-foot"><div class="rate">R2,450<small>/day</small></div><a class="jn-btn jn-btn-primary" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R2,450<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
 
       </div>
@@ -200,22 +222,27 @@
 </template>
 
 <template id="s_jimny_pricing" name="Jimny - Pricing">
-  <section class="s_jimny_pricing" data-snippet="s_jimny_pricing" data-name="Jimny Pricing">
-    <div class="wrap">
-      <div class="section-head"><h2>Pricing</h2><p>Daily rates from R1,300, depending on package.</p></div>
-      <table class="ledger">
-        <colgroup><col style="width:42%"/><col style="width:16%"/><col style="width:22%"/><col style="width:20%"/></colgroup>
-        <thead><tr><th>Package</th><th>Seats</th><th>Rate</th><th><span class="sr-only">Action</span></th></tr></thead>
-        <tbody>
-          <tr><td class="pkg-name">Explorer</td><td>4 Seater</td><td class="amount">R1,300<small>/day</small></td><td class="cta"><a class="jn-btn jn-btn-ghost" href="/book">Book</a></td></tr>
-          <tr class="popular"><td class="pkg-name">Special Vehicle <small style="font-family:var(--jn-font-mono); font-weight:400; color:rgba(241,237,225,0.8);">("Yoda")</small> <span class="flag">Featured</span></td><td>2 Seater</td><td class="amount">R1,900<small>/day</small></td><td class="cta"><a class="jn-btn jn-btn-sand" href="/book">Book</a></td></tr>
-          <tr><td class="pkg-name">Overlander</td><td>2 Seater</td><td class="amount">R2,450<small>/day</small></td><td class="cta"><a class="jn-btn jn-btn-ghost" href="/book">Book</a></td></tr>
-          <tr><td class="pkg-name">Camper <span class="flag">Coming Soon</span></td><td>2 Seater</td><td class="amount">Rate TBC</td><td class="cta"><a class="jn-btn jn-btn-ghost" href="/contact-us">Enquire</a></td></tr>
-        </tbody>
-      </table>
-      <div class="included">
+  <section class="s_jimny_pricing o_cc o_cc2 py-5" data-snippet="s_jimny_pricing" data-name="Jimny Pricing">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 section-head">
+        <h2 class="mb-0">Pricing</h2>
+        <p class="mb-0">Daily rates from R1,300, depending on package.</p>
+      </div>
+      <div class="table-responsive">
+        <table class="table ledger align-middle">
+          <colgroup><col style="width:42%"/><col style="width:16%"/><col style="width:22%"/><col style="width:20%"/></colgroup>
+          <thead><tr><th>Package</th><th>Seats</th><th>Rate</th><th><span class="visually-hidden">Action</span></th></tr></thead>
+          <tbody>
+            <tr><td class="pkg-name">Explorer</td><td>4 Seater</td><td class="amount">R1,300<small>/day</small></td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/book">Book</a></td></tr>
+            <tr class="popular"><td class="pkg-name">Special Vehicle <small class="fw-normal">("Yoda")</small> <span class="flag">Featured</span></td><td>2 Seater</td><td class="amount">R1,900<small>/day</small></td><td class="cta text-end"><a class="btn btn-secondary btn-sm" href="/book">Book</a></td></tr>
+            <tr><td class="pkg-name">Overlander</td><td>2 Seater</td><td class="amount">R2,450<small>/day</small></td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/book">Book</a></td></tr>
+            <tr><td class="pkg-name">Camper <span class="flag">Coming Soon</span></td><td>2 Seater</td><td class="amount">Rate TBC</td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/contact-us">Enquire</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="included d-flex justify-content-between align-items-start flex-wrap gap-4 border-top pt-4 mt-4">
         <div class="kicker">What's included</div>
-        <div class="included-list">
+        <div class="included-list d-flex flex-wrap">
           <span>Bigger, better tyres</span><span>Upgraded suspension</span><span>GPS &amp; maps</span>
           <span>First aid kit</span><span>Upgraded sound system</span><span>24/7 roadside assistance</span><span>Comfort accessories</span>
         </div>
@@ -225,32 +252,51 @@
 </template>
 
 <template id="s_jimny_addons" name="Jimny - Add-ons">
-  <section class="s_jimny_addons" data-snippet="s_jimny_addons" data-name="Jimny Add-ons">
-    <div class="wrap">
-      <div class="section-head"><h2>Premium add-ons</h2><p>We took the toughest little 4X4 and loaded it with every bell and whistle.</p></div>
-      <div class="manifest">
-        <div class="manifest-row"><div class="nick">"The Roof Mule"</div><h3>Heavy-Duty Roof Rack</h3><p>Built to haul all your oversized gear — gives the Jimny that rugged, adventure-ready silhouette without stealing your legroom.</p></div>
-        <div class="manifest-row"><div class="nick">"The Penthouse"</div><h3>Rooftop Tent</h3><p>A premium pop-up tent that keeps you high above the creepy-crawlies. Sets up in seconds, sleep like royalty under the stars.</p></div>
-        <div class="manifest-row"><div class="nick">"The Instant Veranda"</div><h3>270° Awning</h3><p>Massive, wrap-around shade that deploys in an instant — escape the blistering sun or ride out a midday storm.</p></div>
-        <div class="manifest-row"><div class="nick">"The Magic Carpet"</div><h3>Upgraded Suspension</h3><p>Heavy-duty shocks and springs with a functional lift kit. Extra clearance, smoother corrugated gravel roads.</p></div>
+  <section class="s_jimny_addons o_cc o_cc4 py-5" data-snippet="s_jimny_addons" data-name="Jimny Add-ons">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 section-head">
+        <h2 class="mb-0">Premium add-ons</h2>
+        <p class="mb-0">We took the toughest little 4X4 and loaded it with every bell and whistle.</p>
+      </div>
+      <div class="manifest border-top">
+        <div class="row manifest-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 nick">"The Roof Mule"</div>
+          <div class="col-lg-3"><h3>Heavy-Duty Roof Rack</h3></div>
+          <div class="col-lg-7"><p>Built to haul all your oversized gear — gives the Jimny that rugged, adventure-ready silhouette without stealing your legroom.</p></div>
+        </div>
+        <div class="row manifest-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 nick">"The Penthouse"</div>
+          <div class="col-lg-3"><h3>Rooftop Tent</h3></div>
+          <div class="col-lg-7"><p>A premium pop-up tent that keeps you high above the creepy-crawlies. Sets up in seconds, sleep like royalty under the stars.</p></div>
+        </div>
+        <div class="row manifest-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 nick">"The Instant Veranda"</div>
+          <div class="col-lg-3"><h3>270° Awning</h3></div>
+          <div class="col-lg-7"><p>Massive, wrap-around shade that deploys in an instant — escape the blistering sun or ride out a midday storm.</p></div>
+        </div>
+        <div class="row manifest-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 nick">"The Magic Carpet"</div>
+          <div class="col-lg-3"><h3>Upgraded Suspension</h3></div>
+          <div class="col-lg-7"><p>Heavy-duty shocks and springs with a functional lift kit. Extra clearance, smoother corrugated gravel roads.</p></div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <template id="s_jimny_testimonials" name="Jimny - Testimonials">
-  <section class="s_jimny_testimonials" data-snippet="s_jimny_testimonials" data-name="Jimny Testimonials">
-    <div class="wrap">
-      <div class="kicker">
+  <section class="s_jimny_testimonials o_cc o_cc4 py-5" data-snippet="s_jimny_testimonials" data-name="Jimny Testimonials">
+    <div class="container">
+      <div class="kicker d-flex align-items-center gap-2 mb-4">
         <img loading="lazy" src="/theme_custom/static/src/img/testi-kicker-icon.png" alt=""/>
         Trusted on the trails
       </div>
-      <div class="testi-grid">
-        <div class="note">
+      <div class="row g-5">
+        <div class="col-lg-6 note">
           <q>Money can't buy happiness, but it can buy you a fully kitted Suzuki Jimny... and that's kind of the same thing.</q>
           <div class="who">Pieter Mostert <span>— Financial Director</span></div>
         </div>
-        <div class="note">
+        <div class="col-lg-6 note">
           <q>It is not the size of the dog in the fight. It is the size of the Jimny driver's ego when passing a stuck Land Cruiser.</q>
           <div class="who">Danniell Coetzee <span>— Operational Director</span></div>
         </div>
@@ -260,36 +306,48 @@
 </template>
 
 <template id="s_jimny_page_head" name="Jimny - Page Head">
-  <section class="s_jimny_page_head" data-snippet="s_jimny_page_head" data-name="Jimny Page Head">
-    <div class="wrap">
-      <h1>Page Title</h1>
-      <p>A short line describing what visitors will find on this page.</p>
+  <section class="s_jimny_page_head o_cc o_cc4 py-5" data-snippet="s_jimny_page_head" data-name="Jimny Page Head">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Page Title</h1>
+          <p>A short line describing what visitors will find on this page.</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <template id="s_jimny_routes" name="Jimny - Route Ideas">
-  <section class="s_jimny_routes" data-snippet="s_jimny_routes" data-name="Jimny Route Ideas">
-    <div class="wrap">
-      <h2 class="sr-only">Route Ideas</h2>
-      <div class="route-grid">
-        <div class="route">
-          <img class="route-photo" loading="lazy" src="/theme_custom/static/src/img/feature-photo.jpg" alt="Mountain river valley at sunset, Western Cape"/>
+  <section class="s_jimny_routes o_cc o_cc3 py-5" data-snippet="s_jimny_routes" data-name="Jimny Route Ideas">
+    <div class="container">
+      <h2 class="visually-hidden">Route Ideas</h2>
+      <div class="row g-0 route-grid">
+        <div class="col-md-6 route">
+          <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/feature-photo.jpg" alt="Mountain river valley at sunset, Western Cape"/>
+          </div>
           <div class="dist">≈ 2.5 HRS FROM CAPE TOWN</div><h3>Cederberg</h3>
           <p>Rock formations, rooibos country, and some of the best stargazing in the Western Cape. Rough gravel in sections — built for the Overlander package.</p>
         </div>
-        <div class="route">
-          <img class="route-photo" loading="lazy" src="/theme_custom/static/src/img/route-route62.jpg" alt="Open highway through mountains on Route 62"/>
+        <div class="col-md-6 route">
+          <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/route-route62.jpg" alt="Open highway through mountains on Route 62"/>
+          </div>
           <div class="dist">≈ 2 HRS FROM CAPE TOWN</div><h3>Route 62</h3>
           <p>The world's longest wine route by road. Easy tar with detours onto farm roads — a good Explorer-package weekend.</p>
         </div>
-        <div class="route">
-          <img class="route-photo" loading="lazy" src="/theme_custom/static/src/img/route-westcoast.jpg" alt="Rocky West Coast shoreline at sunset"/>
+        <div class="col-md-6 route">
+          <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/route-westcoast.jpg" alt="Rocky West Coast shoreline at sunset"/>
+          </div>
           <div class="dist">≈ 1.5 HRS FROM CAPE TOWN</div><h3>West Coast</h3>
           <p>Wildflowers in season, empty beaches, laid-back fishing villages. Flat and forgiving for a first-timer.</p>
         </div>
-        <div class="route">
-          <img class="route-photo" loading="lazy" src="/theme_custom/static/src/img/route-karoo.jpg" alt="Karoo sunset with a Jimny 4x4 Rental and campfire"/>
+        <div class="col-md-6 route">
+          <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/route-karoo.jpg" alt="Karoo sunset with a Jimny 4x4 Rental and campfire"/>
+          </div>
           <div class="dist">≈ 4 HRS FROM CAPE TOWN</div><h3>Karoo</h3>
           <p>Big sky, dead-straight roads, proper silence. Pair with the Camper package and the rooftop tent.</p>
         </div>
@@ -299,113 +357,133 @@
 </template>
 
 <template id="s_jimny_events" name="Jimny - Events">
-  <section class="s_jimny_events" data-snippet="s_jimny_events" data-name="Jimny Events">
-    <div class="wrap">
-      <h2 class="sr-only">Upcoming Events</h2>
-      <div class="events-banner">
-        <img loading="lazy" src="/theme_custom/static/src/img/events-banner.jpg" alt="Convoy of Jimny 4x4 Rentals driving through the Botswana bush"/>
+  <section class="s_jimny_events o_cc o_cc1 py-5" data-snippet="s_jimny_events" data-name="Jimny Events">
+    <div class="container">
+      <h2 class="visually-hidden">Upcoming Events</h2>
+      <div class="events-banner ratio mb-3" style="--bs-aspect-ratio:43.75%;">
+        <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/events-banner.jpg" alt="Convoy of Jimny 4x4 Rentals driving through the Botswana bush"/>
       </div>
-      <div class="event-list">
-        <div class="event-row"><div class="tag">Next Up</div><div><h3>Next Big Adventure</h3><p>Lock in your spot for the next group getaway.</p></div></div>
-        <div class="event-row"><div class="tag">Community</div><div><h3>Drive, Explore, Connect</h3><p>Turn strangers into lifelong trail buddies.</p></div></div>
-        <div class="event-row"><div class="tag">Atmosphere</div><div><h3>Unbeatable Vibes</h3><p>Good company, campfire laughs, good music, epic driving.</p></div></div>
-        <div class="event-row"><div class="tag">Terrain</div><div><h3>Epic Trails Await</h3><p>Trade tarmac for dirt and unforgettable views.</p></div></div>
+      <div class="event-list border-top">
+        <div class="row event-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 tag">Next Up</div>
+          <div class="col-lg-10"><h3>Next Big Adventure</h3><p>Lock in your spot for the next group getaway.</p></div>
+        </div>
+        <div class="row event-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 tag">Community</div>
+          <div class="col-lg-10"><h3>Drive, Explore, Connect</h3><p>Turn strangers into lifelong trail buddies.</p></div>
+        </div>
+        <div class="row event-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 tag">Atmosphere</div>
+          <div class="col-lg-10"><h3>Unbeatable Vibes</h3><p>Good company, campfire laughs, good music, epic driving.</p></div>
+        </div>
+        <div class="row event-row border-bottom py-3 gx-4">
+          <div class="col-lg-2 tag">Terrain</div>
+          <div class="col-lg-10"><h3>Epic Trails Await</h3><p>Trade tarmac for dirt and unforgettable views.</p></div>
+        </div>
       </div>
-      <div style="margin-top:36px;"><a class="jn-btn jn-btn-primary" href="/contact-us">Enquire Now</a></div>
+      <div class="mt-4"><a class="btn btn-primary" href="/contact-us">Enquire Now</a></div>
     </div>
   </section>
 </template>
 
 <template id="s_jimny_shop_categories" name="Jimny - Shop Categories">
-  <section class="s_jimny_shop_categories" data-snippet="s_jimny_shop_categories" data-name="Jimny Shop Categories">
-    <div class="wrap">
-      <div class="cat-grid">
-        <a class="cat" href="/shop"><div class="n">Apparel</div><div class="c">Men's / Women's</div></a>
-        <a class="cat" href="/shop"><div class="n">Fitments</div><div class="c">Suspension, exhaust</div></a>
-        <a class="cat" href="/shop"><div class="n">Accessories</div><div class="c">Storage, comfort</div></a>
-        <a class="cat" href="/shop"><div class="n">Vehicle Armor</div><div class="c">Bumpers, sliders</div></a>
-        <a class="cat" href="/shop"><div class="n">Tyres &amp; Rims</div><div class="c">Radar, steel rims</div></a>
+  <section class="s_jimny_shop_categories o_cc o_cc3 py-5" data-snippet="s_jimny_shop_categories" data-name="Jimny Shop Categories">
+    <div class="container">
+      <div class="row row-cols-2 row-cols-lg-5 g-0 cat-grid">
+        <div class="col"><a class="cat d-block" href="/shop"><div class="n">Apparel</div><div class="c">Men's / Women's</div></a></div>
+        <div class="col"><a class="cat d-block" href="/shop"><div class="n">Fitments</div><div class="c">Suspension, exhaust</div></a></div>
+        <div class="col"><a class="cat d-block" href="/shop"><div class="n">Accessories</div><div class="c">Storage, comfort</div></a></div>
+        <div class="col"><a class="cat d-block" href="/shop"><div class="n">Vehicle Armor</div><div class="c">Bumpers, sliders</div></a></div>
+        <div class="col"><a class="cat d-block" href="/shop"><div class="n">Tyres &amp; Rims</div><div class="c">Radar, steel rims</div></a></div>
       </div>
     </div>
   </section>
 </template>
 
 <template id="s_jimny_booking_form" name="Jimny - Booking Form">
-  <section class="s_jimny_booking_form" data-snippet="s_jimny_booking_form" data-name="Jimny Booking Form">
-    <h2 class="sr-only">Booking Form</h2>
-    <div class="book-wrap">
-      <div>
-        <div class="form-block">
-          <h3>Your Details</h3>
-          <div class="field-row">
-            <div class="field"><label>Full Name</label><input type="text" placeholder="Pieter Mostert"/></div>
-            <div class="field"><label>Phone</label><input type="text" placeholder="+27 68 000 0000"/></div>
+  <section class="s_jimny_booking_form o_cc o_cc1 py-5" data-snippet="s_jimny_booking_form" data-name="Jimny Booking Form">
+    <div class="container">
+      <h2 class="visually-hidden">Booking Form</h2>
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="form-block mb-4">
+            <h3>Your Details</h3>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field"><label>Full Name</label><input type="text" class="form-control" placeholder="Pieter Mostert"/></div>
+              <div class="col-md-6 field"><label>Phone</label><input type="text" class="form-control" placeholder="+27 68 000 0000"/></div>
+            </div>
+            <div class="field"><label>Email</label><input type="email" class="form-control" placeholder="you@example.com"/></div>
           </div>
-          <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"/></div>
+          <div class="form-block mb-4">
+            <h3>Vehicle &amp; Dates</h3>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field"><label>Pickup Date</label><input type="date" class="form-control"/></div>
+              <div class="col-md-6 field"><label>Return Date</label><input type="date" class="form-control"/></div>
+            </div>
+            <div class="vehicle-pick d-flex flex-column gap-2">
+              <label class="vehicle-opt d-flex justify-content-between align-items-center"><span class="l">Jimny 3-Door MT — CAM-24891<small>Special Vehicle · 2 Seats · Lime</small></span><span class="r">R1,900/day</span></label>
+              <label class="vehicle-opt d-flex justify-content-between align-items-center"><span class="l">Jimny 5-Door AT — CF-374254<small>Explorer · 4 Seats · White</small></span><span class="r">R1,300/day</span></label>
+              <label class="vehicle-opt d-flex justify-content-between align-items-center"><span class="l">Jimny 5-Door AT — CY-11393<small>Overlander · 2 Seats · Ivory</small></span><span class="r">R2,450/day</span></label>
+            </div>
+          </div>
+          <div class="form-block">
+            <h3>Extra Items</h3>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field"><label>Baby Seat — R80/day</label><input type="text" class="form-control" placeholder="Qty"/></div>
+              <div class="col-md-6 field"><label>Camp Lighting Kit — R100/day</label><input type="text" class="form-control" placeholder="Qty"/></div>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6 field"><label>Cross Border Permit — R950 once-off</label><input type="text" class="form-control" placeholder="Qty"/></div>
+              <div class="col-md-6 field"><label>Excess Waiver (drops to R5,000) — R350</label><input type="text" class="form-control" placeholder="Qty"/></div>
+            </div>
+          </div>
         </div>
-        <div class="form-block">
-          <h3>Vehicle &amp; Dates</h3>
-          <div class="field-row">
-            <div class="field"><label>Pickup Date</label><input type="date"/></div>
-            <div class="field"><label>Return Date</label><input type="date"/></div>
-          </div>
-          <div class="vehicle-pick">
-            <label class="vehicle-opt"><span class="l">Jimny 3-Door MT — CAM-24891<small>Special Vehicle · 2 Seats · Lime</small></span><span class="r">R1,900/day</span></label>
-            <label class="vehicle-opt"><span class="l">Jimny 5-Door AT — CF-374254<small>Explorer · 4 Seats · White</small></span><span class="r">R1,300/day</span></label>
-            <label class="vehicle-opt"><span class="l">Jimny 5-Door AT — CY-11393<small>Overlander · 2 Seats · Ivory</small></span><span class="r">R2,450/day</span></label>
+        <div class="col-lg-5">
+          <div class="summary p-4">
+            <h3>Reservation Summary</h3>
+            <div class="summary-row d-flex justify-content-between"><span>Jimny 5-Door AT · CF-374254</span><span>R1,300/day</span></div>
+            <div class="summary-row d-flex justify-content-between"><span>3 nights (min. stay)</span><span>R3,900</span></div>
+            <div class="summary-row d-flex justify-content-between"><span>Deposit due now (30%)</span><span>R1,170</span></div>
+            <div class="summary-row total d-flex justify-content-between"><span>Total</span><span>R3,900</span></div>
+            <a class="btn btn-primary w-100 mt-3" href="/contact-us">Confirm &amp; Pay Deposit</a>
           </div>
         </div>
-        <div class="form-block">
-          <h3>Extra Items</h3>
-          <div class="field-row">
-            <div class="field"><label>Baby Seat — R80/day</label><input type="text" placeholder="Qty"/></div>
-            <div class="field"><label>Camp Lighting Kit — R100/day</label><input type="text" placeholder="Qty"/></div>
-          </div>
-          <div class="field-row">
-            <div class="field"><label>Cross Border Permit — R950 once-off</label><input type="text" placeholder="Qty"/></div>
-            <div class="field"><label>Excess Waiver (drops to R5,000) — R350</label><input type="text" placeholder="Qty"/></div>
-          </div>
-        </div>
-      </div>
-      <div class="summary">
-        <h3>Reservation Summary</h3>
-        <div class="summary-row"><span>Jimny 5-Door AT · CF-374254</span><span>R1,300/day</span></div>
-        <div class="summary-row"><span>3 nights (min. stay)</span><span>R3,900</span></div>
-        <div class="summary-row"><span>Deposit due now (30%)</span><span>R1,170</span></div>
-        <div class="summary-row total"><span>Total</span><span>R3,900</span></div>
-        <a class="jn-btn jn-btn-primary" href="/contact-us">Confirm &amp; Pay Deposit</a>
       </div>
     </div>
   </section>
 </template>
 
 <template id="s_jimny_contact" name="Jimny - Contact">
-  <section class="s_jimny_contact" data-snippet="s_jimny_contact" data-name="Jimny Contact">
-    <h2 class="sr-only">Contact Form</h2>
-    <div class="book-wrap">
-      <div>
-        <div class="form-block">
-          <div class="field-row">
-            <div class="field"><label>Name</label><input type="text"/></div>
-            <div class="field"><label>Phone Number</label><input type="text"/></div>
+  <section class="s_jimny_contact o_cc o_cc1 py-5" data-snippet="s_jimny_contact" data-name="Jimny Contact">
+    <div class="container">
+      <h2 class="visually-hidden">Contact Form</h2>
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="form-block">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field"><label>Name</label><input type="text" class="form-control"/></div>
+              <div class="col-md-6 field"><label>Phone Number</label><input type="text" class="form-control"/></div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field"><label>Email</label><input type="email" class="form-control"/></div>
+              <div class="col-md-6 field"><label>Company</label><input type="text" class="form-control"/></div>
+            </div>
+            <div class="field mb-3"><label>Subject</label><input type="text" class="form-control"/></div>
+            <div class="field mb-3"><label>Question</label><input type="text" class="form-control" placeholder="Tell us about your adventure plans..."/></div>
+            <a class="btn btn-primary" href="/">Submit</a>
           </div>
-          <div class="field-row">
-            <div class="field"><label>Email</label><input type="email"/></div>
-            <div class="field"><label>Company</label><input type="text"/></div>
-          </div>
-          <div class="field" style="margin-bottom:14px;"><label>Subject</label><input type="text"/></div>
-          <div class="field" style="margin-bottom:20px;"><label>Question</label><input type="text" placeholder="Tell us about your adventure plans..."/></div>
-          <a class="jn-btn jn-btn-primary" href="/">Submit</a>
         </div>
-      </div>
-      <div class="summary">
-        <h3>Jimny 4x4 Rentals</h3>
-        <p style="font-size:13.5px; line-height:1.8; color:var(--jn-paper-ink);">
-          52 Cincaut Street, Saxenburg Park 1, Unit 3<br/>
-          Blackheath, Cape Town, 7580, South Africa<br/><br/>
-          +27 68 815 6212<br/>
-          bookings@jimny4x4rentals.co.za
-        </p>
+        <div class="col-lg-5">
+          <div class="summary p-4">
+            <h3>Jimny 4x4 Rentals</h3>
+            <p class="mb-0">
+              52 Cincaut Street, Saxenburg Park 1, Unit 3<br/>
+              Blackheath, Cape Town, 7580, South Africa<br/><br/>
+              +27 68 815 6212<br/>
+              bookings@jimny4x4rentals.co.za
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

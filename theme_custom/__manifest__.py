@@ -10,7 +10,7 @@ events and contact/booking sections.
 Drop these onto any page from the "Insert Blocks" panel and edit the
 text, images and links in place with the standard website editor.
 """,
-    'version': '1.0',
+    'version': '19.0.1.0.0',
     'category': 'Website/Theme',
     'license': 'LGPL-3',
     'depends': ['website'],
