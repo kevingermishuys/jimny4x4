@@ -1,0 +1,27 @@
+// Site-wide Bootstrap variable overrides for Jimny 4x4 Rentals.
+//
+// Loaded in the web._assets_primary_variables bundle, which compiles
+// before Bootstrap's own variables — so these values become the new
+// defaults everywhere on the site, not just inside our snippets. That
+// includes pages theme_custom never templates directly: /web/login,
+// /web/signup, /web/reset_password, the customer portal (/my/...),
+// and the website_sale checkout / payment-method selection page —
+// all of them use plain Bootstrap .btn-primary, links and headings,
+// so they pick up the brand look for free.
+//
+// This does NOT redesign those pages' layout (no hero video on the
+// login screen, no "ticket" styling on payment provider cards) — it
+// only carries over the brand's colors and typography. Say the word
+// if you want a bespoke pass on the login screen or payment step too.
+
+$font-family-base: 'IBM Plex Sans', -apple-system, sans-serif;
+$headings-font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+$headings-font-weight: 400;
+$headings-letter-spacing: .01em;
+
+$primary: #357016;   // forest — primary buttons/links sitewide (Log in, Pay Now, Submit)
+$secondary: #FF954D; // sand — secondary buttons/accents sitewide
+$dark: #14170F;      // ink
+$body-bg: #F5E7CC;   // cream — default page background outside our snippets
+$body-color: #221F16; // paper-ink — default text color outside our snippets
+$link-color: $primary;

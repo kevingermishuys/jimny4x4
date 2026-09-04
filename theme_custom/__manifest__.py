@@ -19,6 +19,9 @@ text, images and links in place with the standard website editor.
         'views/snippets.xml',
     ],
     'assets': {
+        'web._assets_primary_variables': [
+            'theme_custom/static/src/scss/primary_variables.scss',
+        ],
         'web.assets_frontend': [
             'theme_custom/static/src/scss/style.scss',
             'theme_custom/static/src/js/theme_custom.js',
