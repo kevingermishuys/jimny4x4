@@ -14,7 +14,7 @@ Purely additive: installing this only makes the new blocks available.
 It does not change any existing page, color, font, or the login/
 payment screens.
 """,
-    'version': '19.0.1.0.0',
+    'version': '19.0.1.0.1',
     'category': 'Website',
     'license': 'LGPL-3',
     'depends': ['website'],
