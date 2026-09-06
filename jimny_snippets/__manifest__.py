@@ -14,7 +14,7 @@ Purely additive: installing this only makes the new blocks available.
 It does not change any existing page, color, font, or the login/
 payment screens.
 """,
-    'version': '19.0.1.0.2',
+    'version': '19.0.1.0.0',
     'category': 'Website',
     'license': 'LGPL-3',
     'depends': ['website'],
@@ -24,8 +24,8 @@ payment screens.
     ],
     'assets': {
         'web.assets_frontend': [
-            'theme_custom/static/src/scss/style.scss',
-            'theme_custom/static/src/js/theme_custom.js',
+            'jimny_snippets/static/src/scss/style.scss',
+            'jimny_snippets/static/src/js/jimny_snippets.js',
         ],
     },
     'installable': True,

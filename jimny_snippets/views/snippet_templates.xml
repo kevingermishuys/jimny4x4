@@ -20,7 +20,7 @@
 <template id="s_jimny_hero" name="Jimny - Hero">
   <section class="s_jimny_hero o_cc o_cc1 position-relative overflow-hidden d-flex align-items-center min-vh-100" data-snippet="s_jimny_hero" data-name="Jimny Hero">
     <video class="hero-video position-absolute top-0 start-0 w-100 h-100" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="auto">
-      <source src="/theme_custom/static/src/img/hero-video.mp4" type="video/mp4"/>
+      <source src="/jimny_snippets/static/src/img/hero-video.mp4" type="video/mp4"/>
     </video>
     <div class="container position-relative">
       <div class="row">
@@ -51,7 +51,7 @@
       <div class="row align-items-center g-5">
         <div class="col-lg-5">
           <div class="feature-photo ratio ratio-4x3">
-            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/feature-photo.jpg" alt="Jimny 4x4 Rental parked beside a river at sunset with a campfire, Western Cape"/>
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/feature-photo.jpg" alt="Jimny 4x4 Rental parked beside a river at sunset with a campfire, Western Cape"/>
           </div>
         </div>
         <div class="col-lg-7">
@@ -94,7 +94,7 @@
       </div>
       <div class="row g-0 fleet-grid">
         <div class="col-md-6 col-lg-4 ticket">
-          <img class="ticket-photo w-100" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-yoda.jpg" alt="Jimny 3-Door MT, Special Vehicle Yoda, lime green, side profile"/>
+          <img class="ticket-photo w-100" loading="lazy" src="/jimny_snippets/static/src/img/fleet-teaser-yoda.jpg" alt="Jimny 3-Door MT, Special Vehicle Yoda, lime green, side profile"/>
           <div class="ticket-top"><div class="role">Special Vehicle — "Yoda"</div><h3>Jimny 3-Door MT</h3><div class="plate">CAM-24891</div></div>
           <div class="ticket-body">
             <div class="spec"><span class="k">Seats</span><span class="v">2</span></div>
@@ -104,7 +104,7 @@
           <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,900<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
         <div class="col-md-6 col-lg-4 ticket">
-          <img class="ticket-photo w-100" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-explorer.jpg" alt="Jimny 5-Door AT, Explorer package, white exterior"/>
+          <img class="ticket-photo w-100" loading="lazy" src="/jimny_snippets/static/src/img/fleet-teaser-explorer.jpg" alt="Jimny 5-Door AT, Explorer package, white exterior"/>
           <div class="ticket-top"><div class="role">Explorer — 4 Seater</div><h3>Jimny 5-Door AT</h3><div class="plate">CF-374254</div></div>
           <div class="ticket-body">
             <div class="spec"><span class="k">Seats</span><span class="v">4</span></div>
@@ -114,7 +114,7 @@
           <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,300<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
         </div>
         <div class="col-md-6 col-lg-4 ticket">
-          <img class="ticket-photo w-100" loading="lazy" src="/theme_custom/static/src/img/fleet-teaser-overlander.jpg" alt="Jimny 5-Door AT, Overlander package, beige exterior with roof cargo"/>
+          <img class="ticket-photo w-100" loading="lazy" src="/jimny_snippets/static/src/img/fleet-teaser-overlander.jpg" alt="Jimny 5-Door AT, Overlander package, beige exterior with roof cargo"/>
           <div class="ticket-top"><div class="role">Overlander — 2 Seater</div><h3>Jimny 5-Door AT</h3><div class="plate">CY-11393</div></div>
           <div class="ticket-body">
             <div class="spec"><span class="k">Seats</span><span class="v">2</span></div>
@@ -143,12 +143,12 @@
         <div class="col-md-6 col-lg-4 ticket" data-category="special">
           <div class="s_jimny_gallery position-relative overflow-hidden">
             <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Yoda vehicle photos, scrollable">
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-1.jpg" alt="CAM-24891 — front view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-2.jpg" alt="CAM-24891 — rear three-quarter view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-3.jpg" alt="CAM-24891 — side profile"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-4.jpg" alt="CAM-24891 — rear view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-5.jpg" alt="CAM-24891 — front three-quarter view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-yoda-6.jpg" alt="CAM-24891 — overhead view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-1.jpg" alt="CAM-24891 — front view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-2.jpg" alt="CAM-24891 — rear three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-3.jpg" alt="CAM-24891 — side profile"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-4.jpg" alt="CAM-24891 — rear view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-5.jpg" alt="CAM-24891 — front three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-6.jpg" alt="CAM-24891 — overhead view"/>
             </div>
             <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
             <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
@@ -168,12 +168,12 @@
         <div class="col-md-6 col-lg-4 ticket" data-category="explorer">
           <div class="s_jimny_gallery position-relative overflow-hidden">
             <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Jimny Explorer, white exterior photos, scrollable">
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-1.jpg" alt="Jimny Explorer, white exterior, front view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-2.jpg" alt="Jimny Explorer, white exterior, front three-quarter view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-3.jpg" alt="Jimny Explorer, white exterior, left side view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-4.jpg" alt="Jimny Explorer, white exterior, right side view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-5.jpg" alt="Jimny Explorer, white exterior, rear three-quarter view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-explorer-6.jpg" alt="Jimny Explorer, white exterior, rear view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-explorer-1.jpg" alt="Jimny Explorer, white exterior, front view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-explorer-2.jpg" alt="Jimny Explorer, white exterior, front three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-explorer-3.jpg" alt="Jimny Explorer, white exterior, left side view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-explorer-4.jpg" alt="Jimny Explorer, white exterior, right side view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-explorer-5.jpg" alt="Jimny Explorer, white exterior, rear three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-explorer-6.jpg" alt="Jimny Explorer, white exterior, rear view"/>
             </div>
             <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
             <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
@@ -193,12 +193,12 @@
         <div class="col-md-6 col-lg-4 ticket" data-category="overlander">
           <div class="s_jimny_gallery position-relative overflow-hidden">
             <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Jimny Overlander, beige exterior with roof cargo photos, scrollable">
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-1.jpg" alt="Jimny Overlander, beige exterior with roof cargo, front view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-2.jpg" alt="Jimny Overlander, beige exterior with roof cargo, front three-quarter view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-3.jpg" alt="Jimny Overlander, beige exterior with roof cargo, left side view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-4.jpg" alt="Jimny Overlander, beige exterior with roof cargo, top-down view showing roof cargo"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-5.jpg" alt="Jimny Overlander, beige exterior with roof cargo, rear three-quarter view"/>
-              <img class="gallery-slide" loading="lazy" src="/theme_custom/static/src/img/fleet-overlander-6.jpg" alt="Jimny Overlander, beige exterior with roof cargo, rear view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-overlander-1.jpg" alt="Jimny Overlander, beige exterior with roof cargo, front view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-overlander-2.jpg" alt="Jimny Overlander, beige exterior with roof cargo, front three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-overlander-3.jpg" alt="Jimny Overlander, beige exterior with roof cargo, left side view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-overlander-4.jpg" alt="Jimny Overlander, beige exterior with roof cargo, top-down view showing roof cargo"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-overlander-5.jpg" alt="Jimny Overlander, beige exterior with roof cargo, rear three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-overlander-6.jpg" alt="Jimny Overlander, beige exterior with roof cargo, rear view"/>
             </div>
             <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
             <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
@@ -288,7 +288,7 @@
   <section class="s_jimny_testimonials o_cc o_cc4 py-5" data-snippet="s_jimny_testimonials" data-name="Jimny Testimonials">
     <div class="container">
       <div class="kicker d-flex align-items-center gap-2 mb-4">
-        <img loading="lazy" src="/theme_custom/static/src/img/testi-kicker-icon.png" alt=""/>
+        <img loading="lazy" src="/jimny_snippets/static/src/img/testi-kicker-icon.png" alt=""/>
         Trusted on the trails
       </div>
       <div class="row g-5">
@@ -325,28 +325,28 @@
       <div class="row g-0 route-grid">
         <div class="col-md-6 route">
           <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
-            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/feature-photo.jpg" alt="Mountain river valley at sunset, Western Cape"/>
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/feature-photo.jpg" alt="Mountain river valley at sunset, Western Cape"/>
           </div>
           <div class="dist">≈ 2.5 HRS FROM CAPE TOWN</div><h3>Cederberg</h3>
           <p>Rock formations, rooibos country, and some of the best stargazing in the Western Cape. Rough gravel in sections — built for the Overlander package.</p>
         </div>
         <div class="col-md-6 route">
           <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
-            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/route-route62.jpg" alt="Open highway through mountains on Route 62"/>
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/route-route62.jpg" alt="Open highway through mountains on Route 62"/>
           </div>
           <div class="dist">≈ 2 HRS FROM CAPE TOWN</div><h3>Route 62</h3>
           <p>The world's longest wine route by road. Easy tar with detours onto farm roads — a good Explorer-package weekend.</p>
         </div>
         <div class="col-md-6 route">
           <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
-            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/route-westcoast.jpg" alt="Rocky West Coast shoreline at sunset"/>
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/route-westcoast.jpg" alt="Rocky West Coast shoreline at sunset"/>
           </div>
           <div class="dist">≈ 1.5 HRS FROM CAPE TOWN</div><h3>West Coast</h3>
           <p>Wildflowers in season, empty beaches, laid-back fishing villages. Flat and forgiving for a first-timer.</p>
         </div>
         <div class="col-md-6 route">
           <div class="route-photo ratio" style="--bs-aspect-ratio:62.5%;">
-            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/route-karoo.jpg" alt="Karoo sunset with a Jimny 4x4 Rental and campfire"/>
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/route-karoo.jpg" alt="Karoo sunset with a Jimny 4x4 Rental and campfire"/>
           </div>
           <div class="dist">≈ 4 HRS FROM CAPE TOWN</div><h3>Karoo</h3>
           <p>Big sky, dead-straight roads, proper silence. Pair with the Camper package and the rooftop tent.</p>
@@ -361,7 +361,7 @@
     <div class="container">
       <h2 class="visually-hidden">Upcoming Events</h2>
       <div class="events-banner ratio mb-3" style="--bs-aspect-ratio:43.75%;">
-        <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/theme_custom/static/src/img/events-banner.jpg" alt="Convoy of Jimny 4x4 Rentals driving through the Botswana bush"/>
+        <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/events-banner.jpg" alt="Convoy of Jimny 4x4 Rentals driving through the Botswana bush"/>
       </div>
       <div class="event-list border-top">
         <div class="row event-row border-bottom py-3 gx-4">

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--
+  Registers the Jimny snippets in the website editor's "Insert Blocks"
+  panel, grouped under their own "Jimny" section rather than mixed into
+  Odoo's default "Structure" tab. Thumbnails point at a few of the real
+  site photos as a pragmatic first pass — swap in dedicated preview
+  screenshots later if you want a more polished picker.
+-->
+<template id="snippets" inherit_id="website.snippets" name="Jimny Theme Snippets">
+    <xpath expr="//div[@id='snippet_structure']" position="after">
+        <div id="snippet_jimny" class="o_panel">
+            <div class="o_panel_header">Jimny</div>
+            <div class="o_panel_body">
+                <t t-snippet="jimny_snippets.s_jimny_hero"
+                   t-thumbnail="/jimny_snippets/static/src/img/events-banner.jpg"
+                   string="Hero"/>
+                <t t-snippet="jimny_snippets.s_jimny_feature"
+                   t-thumbnail="/jimny_snippets/static/src/img/feature-photo.jpg"
+                   string="Feature"/>
+                <t t-snippet="jimny_snippets.s_jimny_steps"
+                   string="Steps"/>
+                <t t-snippet="jimny_snippets.s_jimny_fleet_teaser"
+                   t-thumbnail="/jimny_snippets/static/src/img/fleet-teaser-yoda.jpg"
+                   string="Fleet Teaser"/>
+                <t t-snippet="jimny_snippets.s_jimny_fleet_gallery"
+                   t-thumbnail="/jimny_snippets/static/src/img/fleet-yoda-1.jpg"
+                   string="Fleet Gallery"/>
+                <t t-snippet="jimny_snippets.s_jimny_pricing"
+                   string="Pricing"/>
+                <t t-snippet="jimny_snippets.s_jimny_addons"
+                   string="Add-ons"/>
+                <t t-snippet="jimny_snippets.s_jimny_testimonials"
+                   string="Testimonials"/>
+                <t t-snippet="jimny_snippets.s_jimny_page_head"
+                   string="Page Head"/>
+                <t t-snippet="jimny_snippets.s_jimny_routes"
+                   t-thumbnail="/jimny_snippets/static/src/img/route-westcoast.jpg"
+                   string="Route Ideas"/>
+                <t t-snippet="jimny_snippets.s_jimny_events"
+                   t-thumbnail="/jimny_snippets/static/src/img/events-banner.jpg"
+                   string="Events"/>
+                <t t-snippet="jimny_snippets.s_jimny_shop_categories"
+                   string="Shop Categories"/>
+                <t t-snippet="jimny_snippets.s_jimny_booking_form"
+                   string="Booking Form"/>
+                <t t-snippet="jimny_snippets.s_jimny_contact"
+                   string="Contact"/>
+            </div>
+        </div>
+    </xpath>
+</template>
+
+</odoo>
