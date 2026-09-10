@@ -1,14 +1,19 @@
 // Jimny 4x4 Rentals — theme building blocks
 //
-// Layout comes from Bootstrap 5 (container/row/col-lg-*) and section
-// backgrounds come from Odoo's o_cc/o_ccN color-combo classes on each
-// snippet root, so nothing here reimplements grid or color infrastructure.
-// Buttons are plain Bootstrap .btn/.btn-primary/.btn-outline-primary so
-// they inherit the section's color combo automatically.
+// Layout comes from Bootstrap 5 (container/row/col-lg-*). Section
+// backgrounds/text used to come from Odoo's o_cc/o_ccN color-combo
+// classes, but that broke silently: editing the site's theme colors
+// through the picker UI changed a section's background without
+// correctly updating its paired text/heading color, leaving text
+// unreadable on at least one block. Every background/text color below
+// is now hardcoded per block instead, matching the originally
+// approved dark-ink/forest/cream/parchment rhythm. Buttons are scoped
+// (see "brand buttons" below) rather than relying on Bootstrap's
+// site-wide primary/secondary, for the same reason.
 //
 // Everything below is scoped under a single snippet's .s_[name] root —
 // typography, the fleet ticket/gallery detail styling, the pricing
-// ledger, and a few brand-specific accent tokens that o_cc doesn't cover.
+// ledger, and the brand accent tokens (sand/rust) used throughout.
 
 @font-face {
     font-family: 'Bebas Neue';
@@ -37,8 +42,31 @@
     --jn-r: 2px;
 }
 
+// Hardcoded background/text pairs, matching the originally approved
+// palette. Applied at the top of each block below via @include.
+@mixin jn-bg-ink { background: #14170F; color: #EDE6D3; }
+@mixin jn-bg-forest { background: #1F4A0B; color: #EDE6D3; }
+@mixin jn-bg-cream { background: #F5E7CC; color: #221F16; }
+@mixin jn-bg-parchment { background: #EDE6D3; color: #221F16; }
+
+// Brand buttons, scoped to our blocks only (never touches Bootstrap's
+// global .btn-primary elsewhere on the site, e.g. login/checkout).
+[class^="s_jimny_"] {
+    .btn-primary { background: #357016; border-color: #357016; color: #EDE6D3;
+        &:hover, &:focus { background: #4C9A2A; border-color: #4C9A2A; color: #EDE6D3; }
+    }
+    .btn-outline-primary { border-color: currentColor; color: inherit; background: transparent;
+        &:hover, &:focus { background: rgba(255, 255, 255, 0.1); border-color: currentColor; color: inherit; }
+    }
+    .btn-secondary { background: #FF954D; border-color: #FF954D; color: #14170F;
+        &:hover, &:focus { background: #DDB48C; border-color: #DDB48C; color: #14170F; }
+    }
+}
+
 // ===== HERO =====
 .s_jimny_hero {
+    @include jn-bg-ink;
+    color: #FFFFFF;
     .hero-video { object-fit: cover; z-index: 0; filter: brightness(0.62) saturate(1.05); }
     .container { z-index: 2; }
     .hero-copy { max-width: 620px; }
@@ -59,6 +87,7 @@
 
 // ===== FEATURE =====
 .s_jimny_feature {
+    @include jn-bg-cream;
     h2 { font-family: var(--jn-font-display); font-size: clamp(34px, 4.4vw, 52px); letter-spacing: 0.01em; line-height: 1.02; margin-bottom: 18px; }
     p { font-size: 16px; line-height: 1.7; max-width: 560px; }
     .feature-list {
@@ -69,6 +98,7 @@
 
 // ===== STEPS =====
 .s_jimny_steps {
+    @include jn-bg-forest;
     h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4vw, 42px); letter-spacing: 0.02em; margin-bottom: 8px; }
     > .container > p { font-size: 14.5px; opacity: 0.75; }
     .steps-row {
@@ -87,7 +117,7 @@
     .section-head h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; }
     .section-head p { max-width: 400px; font-size: 14px; line-height: 1.55; opacity: 0.8; }
     .fleet-grid { border-top: 1px solid rgba(0, 0, 0, 0.14); border-left: 1px solid rgba(0, 0, 0, 0.14); }
-    .ticket { border-right: 1px solid rgba(0, 0, 0, 0.14); border-bottom: 1px solid rgba(0, 0, 0, 0.14); background: var(--bs-body-bg, #fff); }
+    .ticket { border-right: 1px solid rgba(0, 0, 0, 0.14); border-bottom: 1px solid rgba(0, 0, 0, 0.14); background: #FFFFFF; color: #221F16; }
     .ticket-photo { aspect-ratio: 4/3; display: block; object-fit: cover; }
     .ticket-top { padding: 24px 24px 18px; border-bottom: 1px dashed rgba(0, 0, 0, 0.14);
         .role { font-family: var(--jn-font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--jn-sand-deep); font-weight: 600; }
@@ -102,13 +132,14 @@
     .fleet-note { margin-top: 14px; font-size: 11.5px; opacity: 0.7; font-family: var(--jn-font-mono); }
 }
 
-.s_jimny_fleet_teaser { @include jn-ticket-styles; }
+.s_jimny_fleet_teaser { @include jn-bg-cream; @include jn-ticket-styles; }
 
 .s_jimny_fleet_gallery {
+    @include jn-bg-cream;
     @include jn-ticket-styles;
 
     .filter-pill { font-family: var(--jn-font-mono); font-size: 11.5px; padding: 13px 16px; min-height: 44px; border: 1px solid rgba(0, 0, 0, 0.14); border-radius: var(--jn-r); opacity: 0.7; cursor: pointer; background: none; color: inherit;
-        &.active { opacity: 1; background: var(--bs-body-color, #222); color: var(--bs-body-bg, #fff); border-color: var(--bs-body-color, #222); }
+        &.active { opacity: 1; background: #221F16; color: #F5E7CC; border-color: #221F16; }
     }
     .s_jimny_gallery { background: #14170F; }
     .gallery-track { overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; &::-webkit-scrollbar { display: none; } }
@@ -124,6 +155,7 @@
 
 // ===== PRICING =====
 .s_jimny_pricing {
+    @include jn-bg-forest;
     .section-head h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; }
     .section-head p { max-width: 400px; font-size: 14px; line-height: 1.55; opacity: 0.75; }
     .ledger {
@@ -141,6 +173,7 @@
 
 // ===== ADD-ONS =====
 .s_jimny_addons {
+    @include jn-bg-parchment;
     .section-head h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; }
     .section-head p { max-width: 400px; font-size: 14px; line-height: 1.55; opacity: 0.8; }
     .manifest-row {
@@ -152,6 +185,7 @@
 
 // ===== TESTIMONIALS =====
 .s_jimny_testimonials {
+    @include jn-bg-forest;
     .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); img { height: 18px; width: auto; } }
     .note { position: relative; padding-left: 26px;
         &::before { content: "\201C"; position: absolute; left: -6px; top: -18px; font-family: var(--jn-font-display); font-size: 64px; color: rgba(205, 161, 122, 0.4); line-height: 1; }
@@ -162,6 +196,7 @@
 
 // ===== PAGE HEAD =====
 .s_jimny_page_head {
+    @include jn-bg-forest;
     h1 { font-family: var(--jn-font-display); font-size: clamp(38px, 5vw, 58px); letter-spacing: 0.01em; margin: 0; }
     p { font-size: 15px; opacity: 0.7; margin-top: 10px; }
 }
@@ -175,7 +210,7 @@
         .l { font-family: var(--jn-font-mono); font-size: 13px; small { display: block; opacity: 0.58; font-size: 11px; margin-top: 2px; } }
         .r { font-family: var(--jn-font-mono); font-weight: 600; }
     }
-    .summary { background: var(--bs-tertiary-bg, #f5f5f5); color: var(--bs-body-color); position: sticky; top: 90px;
+    .summary { background: #EDE6D3; color: #221F16; position: sticky; top: 90px;
         h3 { font-family: var(--jn-font-display); font-size: 20px; margin-bottom: 16px; }
         .summary-row { font-size: 13.5px; padding: 10px 0; border-bottom: 1px dashed rgba(0, 0, 0, 0.14);
             &.total { font-weight: 700; border-bottom: none; padding-top: 14px; font-size: 16px; }
@@ -183,13 +218,14 @@
     }
 }
 
-.s_jimny_booking_form { @include jn-form-styles; }
-.s_jimny_contact { @include jn-form-styles; }
+.s_jimny_booking_form { @include jn-bg-ink; @include jn-form-styles; }
+.s_jimny_contact { @include jn-bg-ink; @include jn-form-styles; }
 
 // ===== SHOP CATEGORY TILES =====
 .s_jimny_shop_categories {
+    @include jn-bg-cream;
     .cat-grid { background: rgba(0, 0, 0, 0.14); border: 1px solid rgba(0, 0, 0, 0.14); }
-    .cat { padding: 28px 20px; text-align: center; background: var(--bs-body-bg, #fff); color: inherit;
+    .cat { padding: 28px 20px; text-align: center; background: #FFFFFF; color: #221F16;
         .n { font-family: var(--jn-font-display); font-size: 26px; }
         .c { font-family: var(--jn-font-mono); font-size: 11px; opacity: 0.7; margin-top: 4px; }
     }
@@ -197,6 +233,7 @@
 
 // ===== EVENTS =====
 .s_jimny_events {
+    @include jn-bg-ink;
     .event-row {
         .tag { font-family: var(--jn-font-mono); font-size: 11px; color: var(--jn-sand); text-transform: uppercase; }
         h3 { font-family: var(--jn-font-display); font-size: 24px; font-weight: 400; letter-spacing: 0.01em; margin: 0; }
@@ -206,8 +243,9 @@
 
 // ===== ROUTE IDEAS =====
 .s_jimny_routes {
+    @include jn-bg-cream;
     .route-grid { background: rgba(0, 0, 0, 0.14); border: 1px solid rgba(0, 0, 0, 0.14); }
-    .route { background: var(--bs-body-bg, #fff); padding-bottom: 28px;
+    .route { background: #FFFFFF; padding-bottom: 28px;
         .dist, h3, p { margin-left: 28px; margin-right: 28px; }
         .dist { font-family: var(--jn-font-mono); font-size: 11px; color: var(--jn-rust); text-transform: uppercase; margin-top: 20px; }
         h3 { font-family: var(--jn-font-display); font-size: 22px; font-weight: 400; margin-top: 6px; margin-bottom: 8px; }
@@ -241,11 +279,12 @@
 
 // ===== FAQ =====
 .s_jimny_faq {
+    @include jn-bg-parchment;
     .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
     h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin-top: 8px; }
     .jimny-faq-accordion {
         --bs-accordion-bg: transparent;
-        --bs-accordion-border-color: rgba(255, 255, 255, 0.14);
+        --bs-accordion-border-color: rgba(0, 0, 0, 0.14);
         --bs-accordion-btn-color: inherit;
         --bs-accordion-active-color: var(--jn-sand);
         --bs-accordion-active-bg: transparent;
@@ -260,6 +299,7 @@
 
 // ===== CONTACT FORM (working) =====
 .s_jimny_contact_form {
+    @include jn-bg-ink;
     @include jn-form-styles;
     .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
     h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 14px; }

@@ -4,21 +4,22 @@
 <!--
   Jimny 4x4 Rentals building blocks.
 
-  Every section root carries o_cc + o_ccN so its background/text pair
-  comes from the website's configured Color Presets (Website >
-  Configuration > Theme) rather than a hardcoded color, and can be
-  changed per-instance from the block's "Colors" option in the editor.
-  The o_ccN picked below is only a sensible default rhythm (dark/light
-  alternating, matching the approved design) — for it to reproduce the
-  exact approved palette, set Color Presets 1-5 to:
-    1 dark ink #14170F / 2 forest #1F4A0B / 3 cream #F5E7CC /
-    4 parchment #EDE6D3 / 5 sand accent #FF954D
-  Layout uses Bootstrap 5's grid (container/row/col-lg-*) and buttons
-  are plain .btn so they pick up the section's color combo automatically.
+  Backgrounds/text are hardcoded per block in style.scss (dark ink
+  #14170F, forest #1F4A0B, cream #F5E7CC, or parchment #EDE6D3),
+  matching the originally approved design's alternating dark/light
+  rhythm. This used to be done via Odoo's o_cc/o_ccN theme-color
+  classes instead, but that broke silently: editing the site's theme
+  colors through the picker UI changed a section's background without
+  correctly updating its paired heading/text color, leaving text
+  unreadable. Hardcoding trades away per-block retinting via the
+  block's own Colors option for guaranteed readability.
+  Layout uses Bootstrap 5's grid (container/row/col-lg-*); buttons are
+  plain .btn/.btn-primary/.btn-outline-primary/.btn-secondary, styled
+  explicitly per section below rather than inheriting a color combo.
 -->
 
 <template id="s_jimny_hero" name="Jimny - Hero">
-  <section class="s_jimny_hero o_cc o_cc1 position-relative overflow-hidden d-flex align-items-center min-vh-100" data-snippet="s_jimny_hero" data-name="Jimny Hero">
+  <section class="s_jimny_hero position-relative overflow-hidden d-flex align-items-center min-vh-100" data-snippet="s_jimny_hero" data-name="Jimny Hero">
     <video class="hero-video position-absolute top-0 start-0 w-100 h-100" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" preload="auto">
       <source src="/jimny_snippets/static/src/img/hero-video.mp4" type="video/mp4"/>
     </video>
@@ -46,7 +47,7 @@
 </template>
 
 <template id="s_jimny_feature" name="Jimny - Feature">
-  <section class="s_jimny_feature o_cc o_cc3 py-5" data-snippet="s_jimny_feature" data-name="Jimny Feature">
+  <section class="s_jimny_feature py-5" data-snippet="s_jimny_feature" data-name="Jimny Feature">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-5">
@@ -71,7 +72,7 @@
 </template>
 
 <template id="s_jimny_steps" name="Jimny - Steps">
-  <section class="s_jimny_steps o_cc o_cc2 py-5" data-snippet="s_jimny_steps" data-name="Jimny Steps">
+  <section class="s_jimny_steps py-5" data-snippet="s_jimny_steps" data-name="Jimny Steps">
     <div class="container">
       <h2>Secure your Jimny in four steps</h2>
       <p class="mb-5">From first message to open road in four steps.</p>
@@ -86,7 +87,7 @@
 </template>
 
 <template id="s_jimny_fleet_teaser" name="Jimny - Fleet Teaser">
-  <section class="s_jimny_fleet_teaser o_cc o_cc3 py-5" data-snippet="s_jimny_fleet_teaser" data-name="Jimny Fleet Teaser">
+  <section class="s_jimny_fleet_teaser py-5" data-snippet="s_jimny_fleet_teaser" data-name="Jimny Fleet Teaser">
     <div class="container">
       <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 section-head">
         <h2 class="mb-0">Our Fleet</h2>
@@ -130,7 +131,7 @@
 </template>
 
 <template id="s_jimny_fleet_gallery" name="Jimny - Fleet Gallery">
-  <section class="s_jimny_fleet_gallery o_cc o_cc3 py-5" data-snippet="s_jimny_fleet_gallery" data-name="Jimny Fleet Gallery">
+  <section class="s_jimny_fleet_gallery py-5" data-snippet="s_jimny_fleet_gallery" data-name="Jimny Fleet Gallery">
     <div class="container">
       <div class="d-flex flex-wrap gap-2 mb-4 filter-row">
         <button class="filter-pill active" data-filter="all">All</button>
@@ -222,7 +223,7 @@
 </template>
 
 <template id="s_jimny_pricing" name="Jimny - Pricing">
-  <section class="s_jimny_pricing o_cc o_cc2 py-5" data-snippet="s_jimny_pricing" data-name="Jimny Pricing">
+  <section class="s_jimny_pricing py-5" data-snippet="s_jimny_pricing" data-name="Jimny Pricing">
     <div class="container">
       <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 section-head">
         <h2 class="mb-0">Pricing</h2>
@@ -252,7 +253,7 @@
 </template>
 
 <template id="s_jimny_addons" name="Jimny - Add-ons">
-  <section class="s_jimny_addons o_cc o_cc4 py-5" data-snippet="s_jimny_addons" data-name="Jimny Add-ons">
+  <section class="s_jimny_addons py-5" data-snippet="s_jimny_addons" data-name="Jimny Add-ons">
     <div class="container">
       <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4 section-head">
         <h2 class="mb-0">Premium add-ons</h2>
@@ -285,7 +286,7 @@
 </template>
 
 <template id="s_jimny_testimonials" name="Jimny - Testimonials">
-  <section class="s_jimny_testimonials o_cc o_cc4 py-5" data-snippet="s_jimny_testimonials" data-name="Jimny Testimonials">
+  <section class="s_jimny_testimonials py-5" data-snippet="s_jimny_testimonials" data-name="Jimny Testimonials">
     <div class="container">
       <div class="kicker d-flex align-items-center gap-2 mb-4">
         <img loading="lazy" src="/jimny_snippets/static/src/img/testi-kicker-icon.png" alt=""/>
@@ -306,7 +307,7 @@
 </template>
 
 <template id="s_jimny_page_head" name="Jimny - Page Head">
-  <section class="s_jimny_page_head o_cc o_cc4 py-5" data-snippet="s_jimny_page_head" data-name="Jimny Page Head">
+  <section class="s_jimny_page_head py-5" data-snippet="s_jimny_page_head" data-name="Jimny Page Head">
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
@@ -319,7 +320,7 @@
 </template>
 
 <template id="s_jimny_routes" name="Jimny - Route Ideas">
-  <section class="s_jimny_routes o_cc o_cc3 py-5" data-snippet="s_jimny_routes" data-name="Jimny Route Ideas">
+  <section class="s_jimny_routes py-5" data-snippet="s_jimny_routes" data-name="Jimny Route Ideas">
     <div class="container">
       <h2 class="visually-hidden">Route Ideas</h2>
       <div class="row g-0 route-grid">
@@ -357,7 +358,7 @@
 </template>
 
 <template id="s_jimny_events" name="Jimny - Events">
-  <section class="s_jimny_events o_cc o_cc1 py-5" data-snippet="s_jimny_events" data-name="Jimny Events">
+  <section class="s_jimny_events py-5" data-snippet="s_jimny_events" data-name="Jimny Events">
     <div class="container">
       <h2 class="visually-hidden">Upcoming Events</h2>
       <div class="events-banner ratio mb-3" style="--bs-aspect-ratio:43.75%;">
@@ -387,7 +388,7 @@
 </template>
 
 <template id="s_jimny_shop_categories" name="Jimny - Shop Categories">
-  <section class="s_jimny_shop_categories o_cc o_cc3 py-5" data-snippet="s_jimny_shop_categories" data-name="Jimny Shop Categories">
+  <section class="s_jimny_shop_categories py-5" data-snippet="s_jimny_shop_categories" data-name="Jimny Shop Categories">
     <div class="container">
       <div class="row row-cols-2 row-cols-lg-5 g-0 cat-grid">
         <div class="col"><a class="cat d-block" href="/shop"><div class="n">Apparel</div><div class="c">Men's / Women's</div></a></div>
@@ -401,7 +402,7 @@
 </template>
 
 <template id="s_jimny_booking_form" name="Jimny - Booking Form">
-  <section class="s_jimny_booking_form o_cc o_cc1 py-5" data-snippet="s_jimny_booking_form" data-name="Jimny Booking Form">
+  <section class="s_jimny_booking_form py-5" data-snippet="s_jimny_booking_form" data-name="Jimny Booking Form">
     <div class="container">
       <h2 class="visually-hidden">Booking Form</h2>
       <div class="row g-5">
@@ -454,7 +455,7 @@
 </template>
 
 <template id="s_jimny_contact" name="Jimny - Contact">
-  <section class="s_jimny_contact o_cc o_cc1 py-5" data-snippet="s_jimny_contact" data-name="Jimny Contact">
+  <section class="s_jimny_contact py-5" data-snippet="s_jimny_contact" data-name="Jimny Contact">
     <div class="container">
       <h2 class="visually-hidden">Contact Form</h2>
       <div class="row g-5">
@@ -516,7 +517,7 @@
 </template>
 
 <template id="s_jimny_faq" name="Jimny - FAQ">
-  <section class="s_jimny_faq o_cc o_cc4 py-5" data-snippet="s_jimny_faq" data-name="Jimny FAQ">
+  <section class="s_jimny_faq py-5" data-snippet="s_jimny_faq" data-name="Jimny FAQ">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
@@ -589,7 +590,7 @@
 </template>
 
 <template id="s_jimny_contact_form" name="Jimny - Contact Form">
-  <section class="s_jimny_contact_form o_cc o_cc1 py-5" data-snippet="s_jimny_contact_form" data-name="Jimny Contact Form">
+  <section class="s_jimny_contact_form py-5" data-snippet="s_jimny_contact_form" data-name="Jimny Contact Form">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-7">
