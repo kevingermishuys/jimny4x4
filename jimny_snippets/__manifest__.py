@@ -10,11 +10,13 @@ events and contact/booking sections.
 Drop these onto any page from the "Insert Blocks" panel and edit the
 text, images and links in place with the standard website editor.
 
-Purely additive: installing this only makes the new blocks available.
-It does not change any existing page, color, font, or the login/
-payment screens.
+Additive: installing this only makes the new blocks available and does
+not change any existing page, color, font, or the login/payment
+screens — with one deliberate exception: a small fix that keeps the
+site header's mobile menu button visible regardless of the current
+theme color configuration.
 """,
-    'version': '19.0.1.0.8',
+    'version': '19.0.1.0.9',
     'category': 'Website',
     'license': 'LGPL-3',
     'depends': ['website'],

@@ -365,19 +365,19 @@
         <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/events-banner.jpg" alt="Convoy of Jimny 4x4 Rentals driving through the Botswana bush"/>
       </div>
       <div class="event-list border-top">
-        <div class="row event-row border-bottom py-3 gx-4">
+        <div class="row event-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 tag">Next Up</div>
           <div class="col-lg-10"><h3>Next Big Adventure</h3><p>Lock in your spot for the next group getaway.</p></div>
         </div>
-        <div class="row event-row border-bottom py-3 gx-4">
+        <div class="row event-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 tag">Community</div>
           <div class="col-lg-10"><h3>Drive, Explore, Connect</h3><p>Turn strangers into lifelong trail buddies.</p></div>
         </div>
-        <div class="row event-row border-bottom py-3 gx-4">
+        <div class="row event-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 tag">Atmosphere</div>
           <div class="col-lg-10"><h3>Unbeatable Vibes</h3><p>Good company, campfire laughs, good music, epic driving.</p></div>
         </div>
-        <div class="row event-row border-bottom py-3 gx-4">
+        <div class="row event-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 tag">Terrain</div>
           <div class="col-lg-10"><h3>Epic Trails Await</h3><p>Trade tarmac for dirt and unforgettable views.</p></div>
         </div>

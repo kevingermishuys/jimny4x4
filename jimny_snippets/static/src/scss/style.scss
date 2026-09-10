@@ -233,6 +233,7 @@
         &:hover { border-color: var(--jn-sand); }
         .l { font-family: var(--jn-font-mono); font-size: 13px; small { display: block; opacity: 0.58; font-size: 11px; margin-top: 2px; } }
         .r { font-family: var(--jn-font-mono); font-weight: 600; }
+        @media (max-width: 400px) { flex-wrap: wrap; row-gap: 4px; .r { margin-left: auto; } }
     }
     .summary { background: #EDE6D3; color: #221F16; position: sticky; top: 90px;
         h3 { font-family: var(--jn-font-display); font-size: 20px; margin-bottom: 16px; }
@@ -339,6 +340,23 @@
     .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
     h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 14px; }
     p { font-size: 15px; opacity: 0.8; }
+}
+
+// ===== HEADER MOBILE MENU TOGGLE (visibility fix) =====
+// Not scoped to a jimny_ snippet: the hamburger button lives in the
+// site header, not in one of our blocks. Its icon is Bootstrap's
+// navbar-light dark-stroke SVG, which stays legible only as long as
+// the header's own o_cc color pairing holds — the exact pairing that
+// broke on the About block when the theme color presets were edited
+// (dark heading on a background that had also gone dark). Same fix
+// here: stop depending on that pairing and give the button a fixed,
+// guaranteed-contrast chip instead.
+#top button[data-bs-toggle="offcanvas"] {
+    background: #14170F !important;
+    border-radius: 4px;
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23EDE6D3' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
 }
 
 // ===== VEHICLE DETAIL =====
