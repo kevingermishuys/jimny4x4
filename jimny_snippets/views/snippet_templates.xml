@@ -237,7 +237,7 @@
             <tr><td class="pkg-name">Explorer</td><td>4 Seater</td><td class="amount">R1,300<small>/day</small></td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/book">Book</a></td></tr>
             <tr class="popular"><td class="pkg-name">Special Vehicle <small class="fw-normal">("Yoda")</small> <span class="flag">Featured</span></td><td>2 Seater</td><td class="amount">R1,900<small>/day</small></td><td class="cta text-end"><a class="btn btn-secondary btn-sm" href="/book">Book</a></td></tr>
             <tr><td class="pkg-name">Overlander</td><td>2 Seater</td><td class="amount">R2,450<small>/day</small></td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/book">Book</a></td></tr>
-            <tr><td class="pkg-name">Camper <span class="flag">Coming Soon</span></td><td>2 Seater</td><td class="amount">Rate TBC</td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/contact-us">Enquire</a></td></tr>
+            <tr><td class="pkg-name">Camper <span class="flag">Coming Soon</span></td><td>2 Seater</td><td class="amount">Rate TBC</td><td class="cta text-end"><a class="btn btn-outline-primary btn-sm" href="/contactus">Enquire</a></td></tr>
           </tbody>
         </table>
       </div>
@@ -382,7 +382,7 @@
           <div class="col-lg-10"><h3>Epic Trails Await</h3><p>Trade tarmac for dirt and unforgettable views.</p></div>
         </div>
       </div>
-      <div class="mt-4"><a class="btn btn-primary" href="/contact-us">Enquire Now</a></div>
+      <div class="mt-4"><a class="btn btn-primary" href="/contactus">Enquire Now</a></div>
     </div>
   </section>
 </template>
@@ -446,7 +446,7 @@
             <div class="summary-row d-flex justify-content-between"><span>3 nights (min. stay)</span><span>R3,900</span></div>
             <div class="summary-row d-flex justify-content-between"><span>Deposit due now (30%)</span><span>R1,170</span></div>
             <div class="summary-row total d-flex justify-content-between"><span>Total</span><span>R3,900</span></div>
-            <a class="btn btn-primary w-100 mt-3" href="/contact-us">Confirm &amp; Pay Deposit</a>
+            <a class="btn btn-primary w-100 mt-3" href="/contactus">Confirm &amp; Pay Deposit</a>
           </div>
         </div>
       </div>
