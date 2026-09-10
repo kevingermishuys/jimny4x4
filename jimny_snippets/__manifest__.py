@@ -16,7 +16,7 @@ screens — with one deliberate exception: a small fix that keeps the
 site header's mobile menu button visible regardless of the current
 theme color configuration.
 """,
-    'version': '19.0.1.0.9',
+    'version': '19.0.1.0.10',
     'category': 'Website',
     'license': 'LGPL-3',
     'depends': ['website'],
