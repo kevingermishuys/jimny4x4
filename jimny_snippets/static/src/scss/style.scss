@@ -216,10 +216,18 @@
 }
 
 // ===== ABOUT =====
+// Hardcoded background/text instead of o_cc: this block's readability
+// broke when the site's theme color presets were edited manually (a
+// heading color that no longer matched its paired background). Fixed
+// colors here mean it can never go invisible regardless of theme
+// config, at the cost of not being retintable via the block's own
+// Colors option.
 .s_jimny_about {
+    background: #F5E7CC;
+    color: #221F16;
     .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
-    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 18px; }
-    p { font-size: 15.5px; line-height: 1.7; opacity: 0.85; }
+    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 18px; color: #14170F; }
+    p { font-size: 15.5px; line-height: 1.7; opacity: 0.85; color: #221F16; }
     .about-photo { overflow: hidden; border-radius: 2px; }
     .about-stats {
         margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0, 0, 0, 0.14); gap: 0;

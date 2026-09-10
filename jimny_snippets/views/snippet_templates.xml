@@ -490,7 +490,7 @@
 </template>
 
 <template id="s_jimny_about" name="Jimny - About">
-  <section class="s_jimny_about o_cc o_cc3 py-5" data-snippet="s_jimny_about" data-name="Jimny About">
+  <section class="s_jimny_about py-5" data-snippet="s_jimny_about" data-name="Jimny About">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
