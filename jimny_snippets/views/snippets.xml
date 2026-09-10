@@ -57,8 +57,17 @@
         <t t-snippet="jimny_snippets.s_jimny_booking_form" string="Booking Form" group="jimny">
             <keywords>jimny, booking, reservation, form</keywords>
         </t>
-        <t t-snippet="jimny_snippets.s_jimny_contact" string="Contact" group="jimny">
-            <keywords>jimny, contact, form, enquiry</keywords>
+        <t t-snippet="jimny_snippets.s_jimny_contact" string="Contact (static)" group="jimny">
+            <keywords>jimny, contact, form, enquiry, mockup</keywords>
+        </t>
+        <t t-snippet="jimny_snippets.s_jimny_about" string="About" group="jimny">
+            <keywords>jimny, about, story, team, who we are</keywords>
+        </t>
+        <t t-snippet="jimny_snippets.s_jimny_faq" string="FAQ" group="jimny">
+            <keywords>jimny, faq, questions, accordion, help</keywords>
+        </t>
+        <t t-snippet="jimny_snippets.s_jimny_contact_form" string="Contact Form (working)" group="jimny">
+            <keywords>jimny, contact, form, enquiry, working, submit</keywords>
         </t>
     </xpath>
 </template>

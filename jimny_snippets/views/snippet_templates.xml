@@ -489,4 +489,159 @@
   </section>
 </template>
 
+<template id="s_jimny_about" name="Jimny - About">
+  <section class="s_jimny_about o_cc o_cc3 py-5" data-snippet="s_jimny_about" data-name="Jimny About">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="kicker">Our Story</div>
+          <h2>Built By People Who'd Rather Be On A Trail</h2>
+          <p>We're a small, local team based in Cape Town who got tired of watching incredible 4x4 gear sit in driveways all week. So we built a fleet of fully-equipped Suzuki Jimnys and made renting one as easy as picking up a set of keys.</p>
+          <p>Every vehicle is GPS tracked, serviced on a strict schedule, and kitted out with the gear we'd actually want on our own trips — rooftop tents, recovery gear, real ground clearance.</p>
+          <div class="about-stats d-flex flex-wrap">
+            <div><b>2019</b><span>Founded</span></div>
+            <div><b>3</b><span>Vehicles GPS Tracked</span></div>
+            <div><b>500+</b><span>Trips Completed</span></div>
+            <div><b>4.9★</b><span>Average Rating</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-photo ratio ratio-4x3">
+            <img loading="lazy" class="w-100 h-100 object-fit-cover" src="/jimny_snippets/static/src/img/route-karoo.jpg" alt="Jimny 4x4 Rental exploring the Karoo at sunset"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<template id="s_jimny_faq" name="Jimny - FAQ">
+  <section class="s_jimny_faq o_cc o_cc4 py-5" data-snippet="s_jimny_faq" data-name="Jimny FAQ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="text-center mb-5">
+            <div class="kicker">FAQ</div>
+            <h2>Frequently Asked Questions</h2>
+          </div>
+          <div class="accordion jimny-faq-accordion" id="jimnyFaqAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq1">What's the minimum age and license requirement?</button>
+              </h3>
+              <div id="jimnyFaq1" class="accordion-collapse collapse show" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">You need to be at least 23 years old with a valid driver's license held for a minimum of 2 years. Bring your license and a valid form of ID when you collect the vehicle.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq2">What's included with every rental?</button>
+              </h3>
+              <div id="jimnyFaq2" class="accordion-collapse collapse" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">Bigger, better tyres, upgraded suspension, GPS tracking, a first aid kit, an upgraded sound system and 24/7 roadside assistance — every Jimny leaves our yard fully kitted out.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq3">How does the deposit work?</button>
+              </h3>
+              <div id="jimnyFaq3" class="accordion-collapse collapse" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">A 30% deposit secures your booking and vehicle. The balance is settled on collection, and your deposit is refunded after the vehicle's returned in its original condition.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq4">Is there a minimum rental period?</button>
+              </h3>
+              <div id="jimnyFaq4" class="accordion-collapse collapse" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">Yes — 3 days minimum on every booking. Longer trips get you more value per day, so ask us about weekly rates.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq5">Can I take the vehicle across the border?</button>
+              </h3>
+              <div id="jimnyFaq5" class="accordion-collapse collapse" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">Absolutely — add a Cross Border Permit (R950 once-off) when you book and we'll sort the paperwork for Namibia, Botswana, Lesotho and beyond.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq6">What's the excess, and can I reduce it?</button>
+              </h3>
+              <div id="jimnyFaq6" class="accordion-collapse collapse" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">Every rental includes standard insurance cover. Add the Excess Waiver (R350) to drop your excess down to R5,000 for extra peace of mind on rougher terrain.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jimnyFaq7">Where do I collect and return the vehicle?</button>
+              </h3>
+              <div id="jimnyFaq7" class="accordion-collapse collapse" data-bs-parent="#jimnyFaqAccordion">
+                <div class="accordion-body">From our Blackheath yard in Cape Town by default — tell us where's easiest for you when you book and we'll try to make it work.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<template id="s_jimny_contact_form" name="Jimny - Contact Form">
+  <section class="s_jimny_contact_form o_cc o_cc1 py-5" data-snippet="s_jimny_contact_form" data-name="Jimny Contact Form">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="kicker">Get In Touch</div>
+          <h2>Let's Plan Your Adventure</h2>
+          <p class="mb-4">Tell us what you're after and we'll get back to you within one business day.</p>
+          <form action="/website/form/" method="post" enctype="multipart/form-data" class="s_website_form o_mark_required" data-mark="*" data-pre-fill="true" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field s_website_form_field" data-type="char">
+                <label class="s_website_form_label" for="jimny_ct_name">Name</label>
+                <input class="form-control s_website_form_input" type="text" name="name" required="1" id="jimny_ct_name"/>
+              </div>
+              <div class="col-md-6 field s_website_form_field" data-type="tel">
+                <label class="s_website_form_label" for="jimny_ct_phone">Phone Number</label>
+                <input class="form-control s_website_form_input" type="tel" name="phone" id="jimny_ct_phone"/>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6 field s_website_form_field" data-type="email">
+                <label class="s_website_form_label" for="jimny_ct_email">Email</label>
+                <input class="form-control s_website_form_input" type="email" name="email_from" required="1" id="jimny_ct_email"/>
+              </div>
+              <div class="col-md-6 field s_website_form_field" data-type="char">
+                <label class="s_website_form_label" for="jimny_ct_company">Company</label>
+                <input class="form-control s_website_form_input" type="text" name="company" id="jimny_ct_company"/>
+              </div>
+            </div>
+            <div class="field s_website_form_field mb-3" data-type="char">
+              <label class="s_website_form_label" for="jimny_ct_subject">Subject</label>
+              <input class="form-control s_website_form_input" type="text" name="subject" id="jimny_ct_subject"/>
+            </div>
+            <div class="field s_website_form_field mb-4" data-type="text">
+              <label class="s_website_form_label" for="jimny_ct_description">Question</label>
+              <textarea class="form-control s_website_form_input" name="description" rows="4" placeholder="Tell us about your adventure plans..." id="jimny_ct_description"/>
+            </div>
+            <a href="#" role="button" class="btn btn-primary s_website_form_send">Send Message</a>
+          </form>
+        </div>
+        <div class="col-lg-5">
+          <div class="summary p-4">
+            <h3>Jimny 4x4 Rentals</h3>
+            <p class="mb-0">
+              52 Cincaut Street, Saxenburg Park 1, Unit 3<br/>
+              Blackheath, Cape Town, 7580, South Africa<br/><br/>
+              +27 68 815 6212<br/>
+              bookings@jimny4x4rentals.co.za
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
 </odoo>

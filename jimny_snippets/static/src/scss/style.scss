@@ -214,3 +214,46 @@
         p { font-size: 13.5px; line-height: 1.6; opacity: 0.8; }
     }
 }
+
+// ===== ABOUT =====
+.s_jimny_about {
+    .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
+    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 18px; }
+    p { font-size: 15.5px; line-height: 1.7; opacity: 0.85; }
+    .about-photo { overflow: hidden; border-radius: 2px; }
+    .about-stats {
+        margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0, 0, 0, 0.14); gap: 0;
+        > div { padding-right: 24px; margin-right: 24px; border-right: 1px solid rgba(0, 0, 0, 0.14);
+            &:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+            b { display: block; font-family: var(--jn-font-display); font-size: 26px; letter-spacing: 0.01em; }
+            span { font-family: var(--jn-font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.7; }
+        }
+    }
+}
+
+// ===== FAQ =====
+.s_jimny_faq {
+    .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
+    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin-top: 8px; }
+    .jimny-faq-accordion {
+        --bs-accordion-bg: transparent;
+        --bs-accordion-border-color: rgba(255, 255, 255, 0.14);
+        --bs-accordion-btn-color: inherit;
+        --bs-accordion-active-color: var(--jn-sand);
+        --bs-accordion-active-bg: transparent;
+        --bs-accordion-btn-focus-border-color: var(--jn-sand);
+        --bs-accordion-btn-focus-box-shadow: none;
+        .accordion-button { font-family: var(--jn-font-mono); font-size: 14.5px; font-weight: 600;
+            &::after { filter: brightness(0) saturate(100%) invert(60%) sepia(60%) saturate(900%) hue-rotate(340deg); }
+        }
+        .accordion-body { font-size: 14px; line-height: 1.7; opacity: 0.85; padding-top: 0; }
+    }
+}
+
+// ===== CONTACT FORM (working) =====
+.s_jimny_contact_form {
+    @include jn-form-styles;
+    .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
+    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 14px; }
+    p { font-size: 15px; opacity: 0.8; }
+}
