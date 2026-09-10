@@ -44,10 +44,16 @@
 
 // Hardcoded background/text pairs, matching the originally approved
 // palette. Applied at the top of each block below via @include.
-@mixin jn-bg-ink { background: #14170F; color: #EDE6D3; }
-@mixin jn-bg-forest { background: #1F4A0B; color: #EDE6D3; }
-@mixin jn-bg-cream { background: #F5E7CC; color: #221F16; }
-@mixin jn-bg-parchment { background: #EDE6D3; color: #221F16; }
+// !important here is deliberate: the website editor re-adds o_cc/o_ccN
+// classes onto a block's saved instance the moment someone touches it
+// in the "Customize" panel, even though the module template no longer
+// includes them. Odoo's own .o_cc.o_ccN rule (two classes) otherwise
+// beats a plain .s_jimny_x rule (one class) on specificity, silently
+// reviving the exact bug this was meant to fix.
+@mixin jn-bg-ink { background: #14170F !important; color: #EDE6D3 !important; }
+@mixin jn-bg-forest { background: #1F4A0B !important; color: #EDE6D3 !important; }
+@mixin jn-bg-cream { background: #F5E7CC !important; color: #221F16 !important; }
+@mixin jn-bg-parchment { background: #EDE6D3 !important; color: #221F16 !important; }
 
 // Brand buttons, scoped to our blocks only (never touches Bootstrap's
 // global .btn-primary elsewhere on the site, e.g. login/checkout).
@@ -66,7 +72,7 @@
 // ===== HERO =====
 .s_jimny_hero {
     @include jn-bg-ink;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     .hero-video { object-fit: cover; z-index: 0; filter: brightness(0.62) saturate(1.05); }
     .container { z-index: 2; }
     .hero-copy { max-width: 620px; }
@@ -261,11 +267,11 @@
 // config, at the cost of not being retintable via the block's own
 // Colors option.
 .s_jimny_about {
-    background: #F5E7CC;
-    color: #221F16;
+    background: #F5E7CC !important;
+    color: #221F16 !important;
     .kicker { font-family: var(--jn-font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--jn-sand); }
-    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 18px; color: #14170F; }
-    p { font-size: 15.5px; line-height: 1.7; opacity: 0.85; color: #221F16; }
+    h2 { font-family: var(--jn-font-display); font-size: clamp(30px, 4.2vw, 46px); letter-spacing: 0.01em; margin: 8px 0 18px; color: #14170F !important; }
+    p { font-size: 15.5px; line-height: 1.7; opacity: 0.85; color: #221F16 !important; }
     .about-photo { overflow: hidden; border-radius: 2px; }
     .about-stats {
         margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0, 0, 0, 0.14); gap: 0;
@@ -324,14 +330,14 @@
         .dot { width: 8px; height: 8px; border-radius: 50%; background: #4C9A2A; }
     }
     .role { font-family: var(--jn-font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--jn-sand-deep); font-weight: 600; }
-    h1 { font-family: var(--jn-font-display); font-size: clamp(36px, 5vw, 54px); letter-spacing: 0.01em; margin: 6px 0 4px; color: #FFFFFF; }
+    h1 { font-family: var(--jn-font-display); font-size: clamp(36px, 5vw, 54px); letter-spacing: 0.01em; margin: 6px 0 4px; color: #FFFFFF !important; }
     .plate { font-family: var(--jn-font-mono); font-size: 13px; opacity: 0.7; margin-bottom: 24px; }
     .vd-spec-strip { margin: 0 -0.5rem 0; }
     .vd-spec { background: rgba(255, 255, 255, 0.06); border-radius: 2px; padding: 14px 16px;
         .k { display: block; font-family: var(--jn-font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.04em; opacity: 0.6; margin-bottom: 4px; }
         .v { display: block; font-family: var(--jn-font-display); font-size: 19px; letter-spacing: 0.01em; }
     }
-    h2 { font-family: var(--jn-font-display); font-size: 26px; letter-spacing: 0.01em; color: #FFFFFF; }
+    h2 { font-family: var(--jn-font-display); font-size: 26px; letter-spacing: 0.01em; color: #FFFFFF !important; }
     .vd-included { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;
         li { font-size: 14px; padding-left: 26px; position: relative; opacity: 0.9;
             &::before { content: "✓"; position: absolute; left: 0; color: var(--jn-sand); font-weight: 700; }
