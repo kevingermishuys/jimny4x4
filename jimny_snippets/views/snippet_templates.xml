@@ -260,22 +260,22 @@
         <p class="mb-0">We took the toughest little 4X4 and loaded it with every bell and whistle.</p>
       </div>
       <div class="manifest border-top">
-        <div class="row manifest-row border-bottom py-3 gx-4">
+        <div class="row manifest-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 nick">"The Roof Mule"</div>
           <div class="col-lg-3"><h3>Heavy-Duty Roof Rack</h3></div>
           <div class="col-lg-7"><p>Built to haul all your oversized gear — gives the Jimny that rugged, adventure-ready silhouette without stealing your legroom.</p></div>
         </div>
-        <div class="row manifest-row border-bottom py-3 gx-4">
+        <div class="row manifest-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 nick">"The Penthouse"</div>
           <div class="col-lg-3"><h3>Rooftop Tent</h3></div>
           <div class="col-lg-7"><p>A premium pop-up tent that keeps you high above the creepy-crawlies. Sets up in seconds, sleep like royalty under the stars.</p></div>
         </div>
-        <div class="row manifest-row border-bottom py-3 gx-4">
+        <div class="row manifest-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 nick">"The Instant Veranda"</div>
           <div class="col-lg-3"><h3>270° Awning</h3></div>
           <div class="col-lg-7"><p>Massive, wrap-around shade that deploys in an instant — escape the blistering sun or ride out a midday storm.</p></div>
         </div>
-        <div class="row manifest-row border-bottom py-3 gx-4">
+        <div class="row manifest-row border-bottom py-3 gx-4 gy-1">
           <div class="col-lg-2 nick">"The Magic Carpet"</div>
           <div class="col-lg-3"><h3>Upgraded Suspension</h3></div>
           <div class="col-lg-7"><p>Heavy-duty shocks and springs with a functional lift kit. Extra clearance, smoother corrugated gravel roads.</p></div>
