@@ -163,7 +163,7 @@
             <div class="spec"><span class="k">Odometer</span><span class="v">0 km</span></div>
             <div class="spec"><span class="k">Tracking</span><span class="v">GPS ✓</span></div>
           </div>
-          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,900<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,900<small>/day</small></div><div class="d-flex gap-2"><a class="btn btn-outline-primary btn-sm" href="/vehicle/yoda">Learn More</a><a class="btn btn-primary btn-sm" href="/book">Book</a></div></div>
         </div>
 
         <div class="col-md-6 col-lg-4 ticket" data-category="explorer">
@@ -188,7 +188,7 @@
             <div class="spec"><span class="k">Odometer</span><span class="v">0 km</span></div>
             <div class="spec"><span class="k">Tracking</span><span class="v">GPS ✓</span></div>
           </div>
-          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,300<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R1,300<small>/day</small></div><div class="d-flex gap-2"><a class="btn btn-outline-primary btn-sm" href="/vehicle/explorer">Learn More</a><a class="btn btn-primary btn-sm" href="/book">Book</a></div></div>
         </div>
 
         <div class="col-md-6 col-lg-4 ticket" data-category="overlander">
@@ -213,7 +213,7 @@
             <div class="spec"><span class="k">Odometer</span><span class="v">0 km</span></div>
             <div class="spec"><span class="k">Tracking</span><span class="v">GPS ✓</span></div>
           </div>
-          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R2,450<small>/day</small></div><a class="btn btn-primary btn-sm" href="/book">Book</a></div>
+          <div class="ticket-foot d-flex justify-content-between align-items-center"><div class="rate">R2,450<small>/day</small></div><div class="d-flex gap-2"><a class="btn btn-outline-primary btn-sm" href="/vehicle/overlander">Learn More</a><a class="btn btn-primary btn-sm" href="/book">Book</a></div></div>
         </div>
 
       </div>
@@ -638,6 +638,56 @@
               +27 68 815 6212<br/>
               bookings@jimny4x4rentals.co.za
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<template id="s_jimny_vehicle_detail" name="Jimny - Vehicle Detail">
+  <section class="s_jimny_vehicle_detail py-5" data-snippet="s_jimny_vehicle_detail" data-name="Jimny Vehicle Detail">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7">
+          <div class="s_jimny_gallery position-relative overflow-hidden mb-4">
+            <div class="gallery-track d-flex" tabindex="0" role="region" aria-label="Vehicle photos, scrollable">
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-1.jpg" alt="Vehicle front view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-2.jpg" alt="Vehicle rear three-quarter view"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-3.jpg" alt="Vehicle side profile"/>
+              <img class="gallery-slide" loading="lazy" src="/jimny_snippets/static/src/img/fleet-yoda-4.jpg" alt="Vehicle rear view"/>
+            </div>
+            <button class="gallery-nav prev" type="button" aria-label="Previous photo">‹</button>
+            <button class="gallery-nav next" type="button" aria-label="Next photo">›</button>
+            <div class="gallery-dots position-absolute d-flex justify-content-center"/>
+          </div>
+          <div class="vd-availability"><span class="dot"/> Available</div>
+          <div class="role">Special Vehicle — "Yoda"</div>
+          <h1>Jimny 3-Door MT</h1>
+          <div class="plate">CAM-24891</div>
+          <div class="row g-3 vd-spec-strip">
+            <div class="col-6 col-md-3 vd-spec"><span class="k">Transmission</span><span class="v">Manual</span></div>
+            <div class="col-6 col-md-3 vd-spec"><span class="k">Package</span><span class="v">Special Vehicle</span></div>
+            <div class="col-6 col-md-3 vd-spec"><span class="k">Colour</span><span class="v">Lime</span></div>
+            <div class="col-6 col-md-3 vd-spec"><span class="k">Seats</span><span class="v">2</span></div>
+          </div>
+          <h2 class="mt-5">What's Included</h2>
+          <ul class="vd-included">
+            <li>Bigger, better tyres</li>
+            <li>Upgraded suspension</li>
+            <li>GPS &amp; live tracking</li>
+            <li>First aid kit</li>
+            <li>Upgraded sound system</li>
+            <li>24/7 roadside assistance</li>
+            <li>Comfort accessories</li>
+          </ul>
+        </div>
+        <div class="col-lg-5">
+          <div class="summary p-4">
+            <div class="summary-row d-flex justify-content-between"><span>Daily Rate</span><span class="vd-rate">R1,900<small>/day</small></span></div>
+            <div class="summary-row d-flex justify-content-between"><span>Min. rental</span><span>3 days</span></div>
+            <a class="btn btn-primary w-100 mt-3" href="/book">Book This Vehicle</a>
+            <a class="btn btn-outline-primary w-100 mt-2" href="/fleet">‹ Back to Fleet</a>
           </div>
         </div>
       </div>

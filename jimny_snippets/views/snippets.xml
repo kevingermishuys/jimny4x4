@@ -69,6 +69,9 @@
         <t t-snippet="jimny_snippets.s_jimny_contact_form" string="Contact Form (working)" group="jimny">
             <keywords>jimny, contact, form, enquiry, working, submit</keywords>
         </t>
+        <t t-snippet="jimny_snippets.s_jimny_vehicle_detail" string="Vehicle Detail" group="jimny">
+            <keywords>jimny, vehicle, detail, learn more, specs, single</keywords>
+        </t>
     </xpath>
 </template>
 
